@@ -3,7 +3,7 @@ from dash import Dash, html
 app = Dash(__name__)
 
 app.layout = html.Div([
-    html.H1("Mon interface GUI - Dash"),
+    html.H1("interface GUI"),
     html.Div("Bienvenue dans votre interface Dash.")
 ])
 
