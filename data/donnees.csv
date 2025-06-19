@@ -1,0 +1,465 @@
+﻿Substance_name;CAS_number;SMILES;Legal_status;Convention;Schedule_or_Table
+butonitazene;_;CCCCOC1=CC=C(C=C1)CC2=NC3=C(N2CCN(CC)CC)C=CC(=C3)[N+](=O)[O-];Narcotic;1961;Inclusion in Schedule I
+3-chloromethcathinone (3-CMC);_;_;Psychotropic;1971;Inclusion in Schedule II
+dipentylone;_;CCCC(C(=O)C1=CC2=C(C=C1)OCO2)N(C)C;Psychotropic;1971;Inclusion in Schedule II
+2-fluorodeschloroketamine;_;CNC1(CCCCC1=O)C2=CC=CC=C2F;Psychotropic;1971;Schedule I
+bromazolam;_;CC1=NN=C2N1C3=C(C=C(C=C3)Br)C(=NC2)C4=CC=CC=C4;Psychotropic;1971;Schedule IV
+4-piperidone;_;C1CNCCC1=O;Precursor;1988;Table I
+1-boc-4-piperidone;_;CC(C)(C)OC(=O)N1CCC(=O)CC1;Precursor;1988;Table I
+P-2-P methyl glycidic acid(“BMK glycidic acid”);_;_;_;_;_
+Methyl ester of P-2-P methyl glycidic acid;_;_;Precursor;1988;Inclusion in Table I
+Ethyl ester of P-2-P methyl glycidic acid;_;_;Precursor;1988;Inclusion in Table I
+Propyl ester of P-2-P methyl glycidic acid;_;_;Precursor;1988;Inclusion in Table I
+Isopropyl ester of P-2-P methyl glycidic acid;_;_;Precursor;1988;Inclusion in Table I
+Butyl ester of P-2-P methyl glycidic acid;_;_;Precursor;1988;Inclusion in Table I
+Isobutyl ester of P-2-P methyl glycidic acid;_;_;Precursor;1988;Inclusion in Table I
+Sec-butyl ester of P-2-P methyl glycidic acid;_;_;Precursor;1988;Inclusion in Table I
+Tert-butyl ester of P-2-P methyl glycidic acid;_;_;Precursor;1988;Inclusion in Table I
+Methyl, ethyl, propyl, isopropyl, butyl, isobutyl, sec-butyl and tert-butyl esters of P-2-P methyl glycidic acid;_;_;Precursor;1988;Inclusion in Table I in the form of a footnote to P-2-P methyl glycidic acid
+Ethyl ester of 3,4-MDP-2-P methyl glycidic acid (“PMK ethyl glycidate”);_;_;Precursor;1988;Inclusion in Table I
+Propyl ester of 3,4-MDP-2-P methyl glycidic acid;_;_;Precursor;1988;Inclusion in Table I
+Isopropyl ester of 3,4-MDP-2-P methyl glycidic acid;_;_;Precursor;1988;Inclusion in Table I
+Butyl ester of 3,4-MDP-2-P methyl glycidic acid;_;_;Precursor;1988;Inclusion in Table I
+Isobutyl ester of 3,4-MDP-2-P methyl glycidic acid;_;_;Precursor;1988;Inclusion in Table I
+Sec-butyl ester of 3,4-MDP-2-P methyl glycidic acid;_;_;Precursor;1988;Inclusion in Table I
+Tert-butyl ester of 3,4-MDP-2-P methyl glycidic acid;_;_;Precursor;1988;Inclusion in Table I
+Ethyl, propyl, isopropyl, butyl, isobutyl, sec-butyl and tert-butyl esters of 3,4-MDP-2-P methyl glycidic acid;_;_;Precursor;1988;Inclusion in Table I in the form of a footnote to P-2-P methyl glycidic acid
+2-methyl-AP-237;_;CCCC(=O)N1CCN(CC1C)CC=CC2=CC=CC=C2;Narcotic;1961;Inclusion in Schedule I
+etazene;_;CCN(CC)CCN1C2=CC=CC=C2N=C1CC3=CC=C(C=C3)OCC;Narcotic;1961;Inclusion in Schedule I
+etonitazepyne;_;CCOC1=CC=C(C=C1)CC2=NC3=C(N2CCN4CCCC4)C=CC(=C3)[N+](=O)[O-];Narcotic;1961;Inclusion in Schedule I
+protonitazene;_;CCCOC1=CC=C(C=C1)CC2=NC3=C(N2CCN(CC)CC)C=CC(=C3)[N+](=O)[O-];Narcotic;1961;Inclusion in Schedule I
+ADB-BUTINACA;_;CCCCN1C2=CC=CC=C2C(=N1)C(=O)NC(C(=O)N)C(C)(C)C;Psychotropic;1971;Inclusion in Schedule II
+alpha-PiH;_;_;Psychotropic;1971;Inclusion in Schedule II
+3-methylmethcathinone;_;CC1=CC(=CC=C1)C(=O)C(C)NC;Psychotropic;1971;Inclusion in Schedule II
+brorphine;_;CC(C1=CC=C(C=C1)Br)N2CCC(CC2)N3C4=CC=CC=C4NC3=O;Narcotic;1961;Inclusion in Schedule I
+metonitazene;_;CCN(CC)CCN1C2=C(C=C(C=C2)[N+](=O)[O-])N=C1CC3=CC=C(C=C3)OC;Narcotic;1961;Inclusion in Table I
+eutylone;_;CCC(C(=O)C1=CC2=C(C=C1)OCO2)NCC;Psychotropic;1971;Inclusion in Table II
+4-AP;_;C1=CN=CC=C1N;Precursor;1988;Inclusion in Table I
+1-boc-4-AP;_;CC(C)(C)OC(=O)N1CCC(CC1)NC2=CC=CC=C2;Precursor;1988;Inclusion in Table I
+norfentanyl;_;CCC(=O)N(C1CCNCC1)C2=CC=CC=C2;Precursor;1988;Inclusion in Table I
+isotonitazene;_;CCN(CC)CCN1C2=C(C=C(C=C2)[N+](=O)[O-])N=C1CC3=CC=C(C=C3)OC(C)C;Narcotic;1961;Inclusion in Schedule I
+CUMYL-PEGACLONE;_;CCCCCN1C2=C(C3=CC=CC=C31)C(=O)N(C=C2)C(C)(C)C4=CC=CC=C4;Psychotropic;1971;Inclusion in Schedule II
+MDMB-4en-PINACA;_;CC(C)(C)C(C(=O)OC)NC(=O)C1=NN(C2=CC=CC=C21)CCCC=C;Psychotropic;1971;Inclusion in Schedule II
+3-methoxyphencyclidine;_;COC1=CC=CC(=C1)C2(CCCCC2)N3CCCCC3;Psychotropic;1971;Inclusion in Schedule II
+diphenidine;_;C1CCN(CC1)C(CC2=CC=CC=C2)C3=CC=CC=C3;Psychotropic;1971;Inclusion in Schedule II
+clonazolam;_;CC1=NN=C2N1C3=C(C=C(C=C3)[N+](=O)[O-])C(=NC2)C4=CC=CC=C4Cl;Psychotropic;1971;Inclusion in Schedule IV
+diclazepam;_;CN1C(=O)CN=C(C2=C1C=CC(=C2)Cl)C3=CC=CC=C3Cl;Psychotropic;1971;Inclusion in Schedule IV
+flubromazolam;_;CC1=NN=C2N1C3=C(C=C(C=C3)Br)C(=NC2)C4=CC=CC=C4F;Psychotropic;1971;Inclusion in Schedule IV
+preparations containing delta-9-tetrahydrocannabinol (dronabinol), produced either by chemical synthesis or as preparations of cannabis, that are compounded as pharmaceutical preparations with one or more other ingredients and in such a way that delta-9-tetrahydrocannabinol (dronabinol) cannot be recovered by readily available means or in a yield that would constitute a risk to public health;_;_;Narcotic;1961;III
+"cannabidiol preparations (preparations considered to be pure cannabidiol, preparations
+containing predominantly cannabidiol and not more than 0.2 per cent of delta-9-
+tetrahydrocannabinol)";_;_;Narcotic;1961;Addition of footnote to I
+extracts and tinctures of cannabis;_;_;Narcotic;1961;Deletion from I
+dronabinol and its stereoisomers (delta-9-tetrahydrocannabinol);_;_;Narcotic;1961;I
+cannabs and cannabis resin;_;_;Narcotic;1961;Deletion from IV
+cannabis and cannabis-related substances;_;_;_;1961 and 1971;_
+cannabis and cannabis-related substances;_;_;_;_;_
+etizolam;_;CCC1=CC2=C(S1)N3C(=NN=C3CN=C2C4=CC=CC=C4Cl)C;Psychotropic;1971;IV
+flualprazolam;_;CC1=NN=C2N1C3=C(C=C(C=C3)Cl)C(=NC2)C4=CC=CC=C4F;Psychotropic;1971;IV
+alpha-PHP;_;CCCCC(C(=O)C1=CC=CC=C1)N2CCCC2;Psychotropic;1971;II
+N-ethylhexedrone;_;CCCCC(C(=O)C1=CC=CC=C1)NCC;Psychotropic;1971;II
+4-CMC (4-chloromethcathinone, clephedrone);_;_;Psychotropic;1971;II
+4F-MDMB-BINACA;_;CC(C)(C)C(C(=O)OC)NC(=O)C1=NN(C2=CC=CC=C21)CCCCF;Psychotropic;1971;II
+5F-MDMB-PICA (5F-MDMB-2201);_;_;Psychotropic;1971;II
+5F-AMB-PINACA (5F-AMB, 5F-MMB-PINACA);_;_;Psychotropic;1971;II
+AB-FUBINACA;_;CC(C)C(C(=O)N)NC(=O)C1=NN(C2=CC=CC=C21)CC3=CC=C(C=C3)F;Psychotropic;1971;II
+DOC;_;CC12CCC3C(C1CCC2C(=O)CO)CCC4=CC(=O)CCC34C;Psychotropic;1971;I
+valerylfentanyl;_;CCCCC(=O)N(C1CCN(CC1)CCC2=CC=CC=C2)C3=CC=CC=C3;Narcotic;1961;I
+crotonylfentanyl;_;CC=CC(=O)N(C1CCN(CC1)CCC2=CC=CC=C2)C3=CC=CC=C3;Narcotic;1961;I
+methyl alpha-phenylacetoacetate (MAPA);_;_;Precursor;1988;I
+"cannabis and
+cannabis resin";_;_;Narcotic;1961;deletion from IV
+dronabinol and its stereoisomers (delta-9-tetrahydrocannabinol);_;_;Narcotic;1961;I (rescheduling from 1971 Convention)
+tetrahydrocannabinol (isomers of delta-9- tetrahydrocannabinol);_;_;Narcotic;1961;I (rescheduling from 1971 Convention)
+extracts and tinctures of cannabis;_;_;Narcotic;1961;deletion from I
+"cannabidiol preparations (preparations considered to be pure cannabidiol, preparations
+containing predominantly cannabidiol and not more than 0.2 per cent of delta-9-
+tetrahydrocannabinol)";_;_;Narcotic;1961;Addition of footnote to I
+Preparations of dronabinol;_;_;Narcotic;1961;III
+hydriodic acid;_;I;Precursor;1988;_
+alpha-phenylacetoacetamide (APAA) (including its optical isomers);_;_;Precursor;1988;Table I
+3,4-MDP-2-P methyl glycidic acid (“PMK glycidic acid”) (all stereoisomers);_;_;Precursor;1988;Table I
+“3,4-MDP-2-P methyl glycidate” (“PMK glycidate”) (all stereoisomers);_;_;Precursor;1988;Table I
+N-ethylnorpentylone (ephylone);_;_;Psychotropic;1971;II
+ADB-CHMINACA (MAB-CHMINACA);_;_;Psychotropic;1971;II
+CUMYL-4CN-BINACA;_;CC(C)(C1=CC=CC=C1)NC(=O)C2=NN(C3=CC=CC=C32)CCCCC#N;Psychotropic;1971;II
+FUB-AMB (MMB-FUBINACA, AMB-FUBINACA;_;_;Psychotropic;1971;II
+ADB-FUBINACA;_;CC(C)(C)C(C(=O)N)NC(=O)C1=NN(C2=CC=CC=C21)CC3=CC=C(C=C3)F;Psychotropic;1971;II
+cyclopropylfentanyl;_;C1CC1C(=O)N(C2CCN(CC2)CCC3=CC=CC=C3)C4=CC=CC=C4;Narcotic;1961;I
+methoxyacetylfentanyl;_;COCC(=O)N(C1CCN(CC1)CCC2=CC=CC=C2)C3=CC=CC=C3;Narcotic;1961;I
+orthofluorofentanyl;_;CCC(=O)N(C1CCN(CC1)CCC2=CC=CC=C2)C3=CC=CC=C3F;Narcotic;1961;I
+parafluorobutyrylfentanyl;_;_;Narcotic;1961;I
+4-fluoroamphetamine (4-FA);_;_;Psychotropic;1971;II
+5F-PB-22;_;C1=CC=C2C(=C1)C(=CN2CCCCCF)C(=O)OC3=CC=CC4=C3N=CC=C4;Psychotropic;1971;II
+UR-144;_;CCCCCN1C=C(C2=CC=CC=C21)C(=O)C3C(C3(C)C)(C)C;Psychotropic;1971;II
+AB-PINACA;_;CCCCCN1C2=CC=CC=C2C(=N1)C(=O)NC(C(C)C)C(=O)N;Psychotropic;1971;II
+5F-MDMB-PINACA (5F-ADB);_;CC(C)(C)C(C(=O)OC)NC(=O)C1=NN(C2=CC=CC=C21)CCCCCF;Psychotropic;1971;II
+AB-CHMINACA;_;CC(C)C(C(=O)N)NC(=O)C1=NN(C2=CC=CC=C21)CC3CCCCC3;Psychotropic;1971;II
+tetrahydrofuranylfentanyl (THF-F);_;_;Narcotic;1961;I
+4-fluoroisobutyrfentanyl (4-FIBF, pFIBF);_;_;Narcotic;1961;I
+acryloylfentanyl (acrylfentanyl);_;_;Narcotic;1961;I
+furanylfentanyl;_;C1CN(CCC1N(C2=CC=CC=C2)C(=O)C3=CC=CO3)CCC4=CC=CC=C4;Narcotic;1961;I
+ocfentanil;_;COCC(=O)N(C1CCN(CC1)CCC2=CC=CC=C2)C3=CC=CC=C3F;Narcotic;1961;I
+carfentanil;_;CCC(=O)N(C1=CC=CC=C1)C2(CCN(CC2)CCC3=CC=CC=C3)C(=O)OC;Narcotic;1961;I and IV
+N-phenethyl-4-piperidone (NPP);_;C1CN(CCC1=O)CCC2=CC=CC=C2;Precursor;1988;Table I
+4-anilino-N-phenethylpiperidine (ANPP);_;_;Precursor;1988;Table I
+XLR-11;_;CC1(C(C1(C)C)C(=O)C2=CN(C3=CC=CC=C32)CCCCCF)C;Psychotropic;1971;II
+5F-APINACA (5F-AKB-48);_;C1C2CC3CC1CC(C2)(C3)NC(=O)C4=NN(C5=CC=CC=C54)CCCCCF;Psychotropic;1971;II
+MDMB-CHMICA;_;CC(C)(C)C(C(=O)OC)NC(=O)C1=CN(C2=CC=CC=C21)CC3CCCCC3;Psychotropic;1971;II
+MPA (methiopropamine);_;_;Psychotropic;1971;II
+pentedrone;_;CCCC(C(=O)C1=CC=CC=C1)NC;Psychotropic;1971;II
+ethylphenidate;_;CCOC(=O)C(C1CCCCN1)C2=CC=CC=C2;Psychotropic;1971;II
+ethylone;_;CCNC(C)C(=O)C1=CC2=C(C=C1)OCO2;Psychotropic;1971;II
+4-MEC (4-methylethcathinone);_;_;Psychotropic;1971;II
+butyrfentanyl;_;CCCC(=O)N(C1CCN(CC1)CCC2=CC=CC=C2)C3=CC=CC=C3;Narcotic;1961;I
+U-47700;_;CN(C)C1CCCCC1N(C)C(=O)C2=CC(=C(C=C2)Cl)Cl;Narcotic;1961;I
+phenazepam;_;C1C(=O)NC2=C(C=C(C=C2)Br)C(=N1)C3=CC=CC=C3Cl;Psychotropic;1971;IV
+methoxetamine (MXE);_;_;Psychotropic;1971;II
+para-Methyl-4-methylaminorex (4,4’-DMAR);_;_;Psychotropic;1971;II
+α-Pyrrolidinovalerophenone (α-PVP);_;_;Psychotropic;1971;II
+para-methoxymethylamphetamine (PMMA);_;_;Psychotropic;1971;I
+MT-45;_;C1CCC(CC1)N2CCN(CC2)C(CC3=CC=CC=C3)C4=CC=CC=C4;Narcotic;1961;I
+acetylfentanyl;_;CC(=O)N(C1CCN(CC1)CCC2=CC=CC=C2)C3=CC=CC=C3;Narcotic;1961;I, IV
+methylone (beta-keto-MDMA);_;_;Psychotropic;1971;II
+3,4-methylenedioxypyrovalerone (MDPV);_;_;Psychotropic;1971;II
+AM-2201;_;C1=CC=C2C(=C1)C=CC=C2C(=O)C3=CN(C4=CC=CC=C43)CCCCCF;Psychotropic;1971;II
+JWH-018;_;CCCCCN1C=C(C2=CC=CC=C21)C(=O)C3=CC=CC4=CC=CC=C43;Psychotropic;1971;II
+N-benzylpiperazine (BZP);_;_;Psychotropic;1971;II
+25I-NBOMe (2C-I-NBOMe);_;_;Psychotropic;1971;I
+25C-NBOMe (2C-C-NBOMe);_;_;Psychotropic;1971;I
+25B-NBOMe (2C-B-NBOMe);_;_;Psychotropic;1971;I
+1,4-butanediol;_;C(CCO)CO;Psychotropic;1971;I
+gamma-butyrolactone (GBL);_;_;Psychotropic;1971;I
+AH-7921;_;CN(C)C1(CCCCC1)CNC(=O)C2=CC(=C(C=C2)Cl)Cl;Narcotic;1961;I
+ketamine;_;CNC1(CCCCC1=O)C2=CC=CC=C2Cl;Psychotropic;1971;IV
+mephedrone (4-methylmethcathinone);_;_;Psychotropic;1971;II
+dronabinol and its stereoisomer;_;_;Psychotropic;1971;from II to III
+alpha-phenylacetoacetonitrile;_;CC(=O)C(C#N)C1=CC=CC=C1;Precursor;1988;Table I
+gamma-hydroxybutyric (GHB)          (rescheduling);_;_;Psychotropic;1971;from IV to III
+Phenylacetic acid (rescheduling);_;C1=CC=C(C=C1)CC(=O)O;Precursor;1988;from II to I
+Dronabinol and its stereoisomers (rescheduling);_;_;Psychotropic;1971;from II to III
+Oripavine;_;CN1CCC23C4C(=CC=C2C1CC5=C3C(=C(C=C5)O)O4)OC;Narcotic;1961;I
+Amineptine;_;C1CC2=CC=CC=C2C(C3=CC=CC=C31)NCCCCCCC(=O)O;Psychotropic;1971;II
+Potassium permanganate (rescheduling);_;[O-][Mn](=O)(=O)=O.[K+];Precursor;1988;from II to I
+Acetic anhydride (rescheduling);_;CC(=O)OC(=O)C;Precursor;1988;from II to I
+Zolpidem (INN);_;CC1=CC=C(C=C1)C2=C(N3C=C(C=CC3=N2)C)CC(=O)N(C)C;Psychotropic;1971;IV
+4-MTA;_;CC(CC1=CC=C(C=C1)SC)N;Psychotropic;1971;I
+GHB;_;C(CC(=O)O)CO;Psychotropic;1971;IV
+2C-B;_;COC1=CC(=C(C=C1CCN)OC)Br;Psychotropic;1971;II
+Isosafrole;_;CC=CC1=CC2=C(C=C1)OCO2;Precursor;1988 Convention;
+3,4-methylenedioxyphenyl-2-propanone;_;CC(=O)CC1=CC2=C(C=C1)OCO2;Precursor;1988 Convention;
+piperonal;_;C1OC2=C(O1)C=C(C=C2)C=O;Precursor;1988 Convention;
+safrole;_;C=CCC1=CC2=C(C=C1)OCO2;Precursor;1988 Convention;
+hydrochloric acid, excluding its salts;_;_;Precursor;1988 Convention;
+methyl ethyl ketone (2-Butanone / MEK);_;_;Precursor;1988 Convention;
+potassium permanganate;_;[O-][Mn](=O)(=O)=O.[K+];Precursor;1988 Convention;
+sulphuric acid, excluding its salts;_;_;Precursor;1988 Convention;
+toluene;_;CC1=CC=CC=C1;Precursor;1988 Convention;
+propylhexedrine;_;CC(CC1CCCCC1)NC;Psychotropic;1971 Convention;
+delta-9-THC and its stereochemical variants (rescheduling);_;_;Psychotropic;1971 Convention;
+4-Methylaminorex;_;CC1C(OC(=N1)N)C2=CC=CC=C2;Psychotropic;1971 Convention;
+N-Ethyl MDA (MDE);_;_;Psychotropic;1971 Convention;
+N-Hydroxy MDA;_;CC(CC1=CC2=C(C=C1)OCO2)NO;Psychotropic;1971 Convention;
+Midazolam;_;CC1=NC=C2N1C3=C(C=C(C=C3)Cl)C(=NC2)C4=CC=CC=C4F;Psychotropic;1971 Convention;
+3-Methylthiofentanyl;_;CCC(=O)N(C1CCN(CC1C)CCC2=CC=CS2)C3=CC=CC=C3;Psychotropic;1971 Convention;
+Thiofentanyl;_;CCC(=O)N(C1CCN(CC1)CCC2=CC=CS2)C3=CC=CC=C3;Narcotic;1961 Convention;
+beta-Hydroxy-3-methylfentanyl;_;CCC(=O)N(C1CCN(CC1C)CC(C2=CC=CC=C2)O)C3=CC=CC=C3;Narcotic;1961 Convention;
+beta-Hydroxyfentanyl;_;CCC(=O)N(C1CCN(CC1)CC(C2=CC=CC=C2)O)C3=CC=CC=C3;Narcotic;1961 Convention;
+para-Fluorofentanyl;_;CCC(=O)N(C1CCN(CC1)CCC2=CC=CC=C2)C3=CC=C(C=C3)F;Narcotic;1961 Convention;
+alpha-Methylthiofentanyl;_;CCC(=O)N(C1CCN(CC1)C(C)CC2=CC=CS2)C3=CC=CC=C3;Narcotic;1961 Convention;
+Dronabinol (rescheduling);_;CCCCCC1=CC(=C2C3C=C(CCC3C(OC2=C1)(C)C)C)O;Narcotic;1961 Convention;
+pyrovalerone;_;CCCC(C(=O)C1=CC=C(C=C1)C)N2CCCC2;Psychotropic;1971 Convention;
+propylhexedrine;_;CC(CC1CCCCC1)NC;Psychotropic;1971 Convention;
+Pemoline;_;C1=CC=C(C=C1)C2C(=O)N=C(O2)N;Psychotropic;1971 Convention;
+Buprenorphine;_;CC(C)(C)C(C)(C1CC23CCC1(C4C25CCN(C3CC6=C5C(=C(C=C6)O)O4)CC7CC7)OC)O;Psychotropic;1971 Convention;
+Metamfetamine racemate;_;CC(CC1=CC=CC=C1)NC;Psychotropic;1971 Convention;
+Sacobarbital (rescheduling);_;_;Psychotropic;1971 Convention;
+MPPP;_;CCC(=O)OC1(CCN(CC1)C)C2=CC=CC=C2;Psychotropic;1971 Convention;
+PEPAP;_;CC(=O)OC1(CCN(CC1)CCC2=CC=CC=C2)C3=CC=CC=C3;Narcotic;1961 Convention;
+3-Methylfentanyl;_;CCC(=O)N(C1CCN(CC1C)CCC2=CC=CC=C2)C3=CC=CC=C3;Narcotic;1961 Convention;
+alpha-Methylfentanyl;_;CCC(=O)N(C1CCN(CC1)C(C)CC2=CC=CC=C2)C3=CC=CC=C3;Narcotic;1961 Convention;
+acetyl-alpha-methylfentanyl;_;CC(CC1=CC=CC=C1)N2CCC(CC2)N(C3=CC=CC=C3)C(=O)C;Narcotic;1961 Convention;
+vinylbital (5-(l-methyl-butyl)-5-vinylbarbituric acid);_;_;Psychotropic;1971 Convention;
+secbutabarbital (5-sec-butyl-5-ethylbarbituric acid);_;_;Psychotropic;1971 Convention;
+Butobarbital;_;CCCCC1(C(=O)NC(=O)NC1=O)CC;Psychotropic;1971 Convention;
+Allobarbital (5,5-diallybarbituric acid);_;_;Psychotropic;1971 Convention;
+Butalbital (5-ally-5-isobutylbarbituric acid);_;_;Psychotropic;1971 Convention;
+Pyrovalerone;_;CCCC(C(=O)C1=CC=C(C=C1)C)N2CCCC2;Psychotropic;1971 Convention;
+Propylhexedrine;_;CC(CC1CCCCC1)NC;Psychotropic;1971 Convention;
+Mefenorex;_;CC(CC1=CC=CC=C1)NCCCCl;Psychotropic;1971 Convention;
+Fenproporex;_;CC(CC1=CC=CC=C1)NCCC#N;Psychotropic;1971 Convention;
+Fencamfamin;_;CCNC1C2CCC(C2)C1C3=CC=CC=C3;Psychotropic;1971 Convention;
+N -ethylamphetamine;_;_;Psychotropic;1971 Convention;
+d-threo-2-amino-1-hydroxy-1-phenylpropane (also referred to as cathine);_;_;Psychotropic;1971 Convention;
+Levometamfetamine;_;_;Psychotropic;1971 Convention;
+Levamfetamine;_;CC(CC1=CC=CC=C1)N;Psychotropic;1971 Convention;
+Fenetylline;_;CC(CC1=CC=CC=C1)NCCN2C=NC3=C2C(=O)N(C(=O)N3C)C;Psychotropic;1971 Convention;
+3,4-Methylenedioxymetamfetamine  (MDMA);_;_;Psychotropic;1971 Convention;
+5-Methoxy-3,4-methylenedioxyamfetamine (MMDA);_;_;Psychotropic;1971 Convention;
+2,5-Dimethoxy-4-ethylamfetamine  (DOET);_;_;Psychotropic;1971 Convention;
+3,4,5-Trimethoxyamfetamine (TMA);_;_;Psychotropic;1971 Convention;
+Paramethoxyamphetamine (PMA);_;_;Psychotropic;1971 Convention;
+2,5-Dimethoxyamfetamine (DMA);_;_;Psychotropic;1971 Convention;
+Cathinone;_;CC(C(=O)C1=CC=CC=C1)N;Psychotropic;1971 Convention;
+3,4-methylenedioxyamphetamine (MDA);_;CC(CC1=CC2=C(C=C1)OCO2)N;Psychotropic;1971 Convention;
+2,5-dimethoxy-4-bromoamphetamine (DOB);_;_;Psychotropic;1971 Convention;
+Triazolam;_;CC1=NN=C2N1C3=C(C=C(C=C3)Cl)C(=NC2)C4=CC=CC=C4Cl;Psychotropic;1971 Convention;
+Tetrazepam;_;CN1C(=O)CN=C(C2=C1C=CC(=C2)Cl)C3=CCCCC3;Psychotropic;1971 Convention;
+Temazepam;_;CN1C2=C(C=C(C=C2)Cl)C(=NC(C1=O)O)C3=CC=CC=C3;Psychotropic;1971 Convention;
+Prazepam;_;C1CC1CN2C(=O)CN=C(C3=C2C=CC(=C3)Cl)C4=CC=CC=C4;Psychotropic;1971 Convention;
+Pinazepam;_;C#CCN1C(=O)CN=C(C2=C1C=CC(=C2)Cl)C3=CC=CC=C3;Psychotropic;1971 Convention;
+Oxazolam;_;CC1CN2CC(=O)NC3=C(C2(O1)C4=CC=CC=C4)C=C(C=C3)Cl;Psychotropic;1971 Convention;
+Oxazepam;_;C1=CC=C(C=C1)C2=NC(C(=O)NC3=C2C=C(C=C3)Cl)O;Psychotropic;1971 Convention;
+Nordazepam;_;C1C(=O)NC2=C(C=C(C=C2)Cl)C(=N1)C3=CC=CC=C3;Psychotropic;1971 Convention;
+Nitrazepam;_;C1C(=O)NC2=C(C=C(C=C2)[N+](=O)[O-])C(=N1)C3=CC=CC=C3;Psychotropic;1971 Convention;
+Nimetazepam;_;CN1C(=O)CN=C(C2=C1C=CC(=C2)[N+](=O)[O-])C3=CC=CC=C3;Psychotropic;1971 Convention;
+Medazepam;_;CN1CCN=C(C2=C1C=CC(=C2)Cl)C3=CC=CC=C3;Psychotropic;1971 Convention;
+Lormetazepam;_;CN1C2=C(C=C(C=C2)Cl)C(=NC(C1=O)O)C3=CC=CC=C3Cl;Psychotropic;1971 Convention;
+Lorazepam;_;C1=CC=C(C(=C1)C2=NC(C(=O)NC3=C2C=C(C=C3)Cl)O)Cl;Psychotropic;1971 Convention;
+Loprazolam;_;CN1CCN(CC1)C=C2C(=O)N3C(=N2)CN=C(C4=C3C=CC(=C4)[N+](=O)[O-])C5=CC=CC=C5Cl;Psychotropic;1971 Convention;
+Ketazolam;_;CC1=CC(=O)N2CC(=O)N(C3=C(C2(O1)C4=CC=CC=C4)C=C(C=C3)Cl)C;Psychotropic;1971 Convention;
+Haloxazolam;_;C1COC2(N1CC(=O)NC3=C2C=C(C=C3)Br)C4=CC=CC=C4F;Psychotropic;1971 Convention;
+Halazepam;_;C1C(=O)N(C2=C(C=C(C=C2)Cl)C(=N1)C3=CC=CC=C3)CC(F)(F)F;Psychotropic;1971 Convention;
+Flurazepam;_;CCN(CC)CCN1C(=O)CN=C(C2=C1C=CC(=C2)Cl)C3=CC=CC=C3F;Psychotropic;1971 Convention;
+Flunitrazepam;_;CN1C(=O)CN=C(C2=C1C=CC(=C2)[N+](=O)[O-])C3=CC=CC=C3F;Psychotropic;1971 Convention;
+Fludiazepam;_;CN1C(=O)CN=C(C2=C1C=CC(=C2)Cl)C3=CC=CC=C3F;Psychotropic;1971 Convention;
+Ethyl loflazepate;_;CCOC(=O)C1C(=O)NC2=C(C=C(C=C2)Cl)C(=N1)C3=CC=CC=C3F;Psychotropic;1971 Convention;
+Estazolam;_;C1C2=NN=CN2C3=C(C=C(C=C3)Cl)C(=N1)C4=CC=CC=C4;Psychotropic;1971 Convention;
+Diazepam;_;CN1C(=O)CN=C(C2=C1C=CC(=C2)Cl)C3=CC=CC=C3;Psychotropic;1971 Convention;
+Delorazepam;_;C1C(=O)NC2=C(C=C(C=C2)Cl)C(=N1)C3=CC=CC=C3Cl;Psychotropic;1971 Convention;
+Cloxazolam;_;C1COC2(N1CC(=O)NC3=C2C=C(C=C3)Cl)C4=CC=CC=C4Cl;Psychotropic;1971 Convention;
+Clotiazepam;_;CCC1=CC2=C(S1)N(C(=O)CN=C2C3=CC=CC=C3Cl)C;Psychotropic;1971 Convention;
+Clorazepate;_;C1=CC=C(C=C1)C2=NC(C(=O)NC3=C2C=C(C=C3)Cl)C(=O)O;Psychotropic;1971 Convention;
+Clonazepam;_;C1C(=O)NC2=C(C=C(C=C2)[N+](=O)[O-])C(=N1)C3=CC=CC=C3Cl;Psychotropic;1971 Convention;
+Clobazam;_;CN1C(=O)CC(=O)N(C2=C1C=CC(=C2)Cl)C3=CC=CC=C3;Psychotropic;1971 Convention;
+Chlordiazepoxide;_;CN=C1CN(C(=C2C=C(C=CC2=N1)Cl)C3=CC=CC=C3)O;Psychotropic;1971 Convention;
+Camazepam;_;CN1C2=C(C=C(C=C2)Cl)C(=NC(C1=O)OC(=O)N(C)C)C3=CC=CC=C3;Psychotropic;1971 Convention;
+Bromazepam;_;C1C(=O)NC2=C(C=C(C=C2)Br)C(=N1)C3=CC=CC=N3;Psychotropic;1971 Convention;
+Alprazolam;_;CC1=NN=C2N1C3=C(C=C(C=C3)Cl)C(=NC2)C4=CC=CC=C4;Psychotropic;1971 Convention;
+Pentazocine;_;CC1C2CC3=C(C1(CCN2CC=C(C)C)C)C=C(C=C3)O;Psychotropic;1971 Convention;
+Alfentanil;_;CCC(=O)N(C1=CC=CC=C1)C2(CCN(CC2)CCN3C(=O)N(N=N3)CC)COC;Narcotic;1961 Convention;
+chlordiazepoxide;_;CN=C1CN(C(=C2C=C(C=CC2=N1)Cl)C3=CC=CC=C3)O;Psychotropic;1971 Convention;
+clonazepam;_;C1C(=O)NC2=C(C=C(C=C2)[N+](=O)[O-])C(=N1)C3=CC=CC=C3Cl;Psychotropic;1971 Convention;
+clorazepate;_;C1=CC=C(C=C1)C2=NC(C(=O)NC3=C2C=C(C=C3)Cl)C(=O)O;Psychotropic;1971 Convention;
+diazepam;_;CN1C(=O)CN=C(C2=C1C=CC(=C2)Cl)C3=CC=CC=C3;Psychotropic;1971 Convention;
+flurazepam;_;CCN(CC)CCN1C(=O)CN=C(C2=C1C=CC(=C2)Cl)C3=CC=CC=C3F;Psychotropic;1971 Convention;
+lorazepam;_;C1=CC=C(C(=C1)C2=NC(C(=O)NC3=C2C=C(C=C3)Cl)O)Cl;Psychotropic;1971 Convention;
+medazepam;_;CN1CCN=C(C2=C1C=CC(=C2)Cl)C3=CC=CC=C3;Psychotropic;1971 Convention;
+nitrazepam;_;C1C(=O)NC2=C(C=C(C=C2)[N+](=O)[O-])C(=N1)C3=CC=CC=C3;Psychotropic;1971 Convention;
+oxalozam;_;_;Psychotropic;1971 Convention;
+oxazepam;_;C1=CC=C(C=C1)C2=NC(C(=O)NC3=C2C=C(C=C3)Cl)O;Psychotropic;1971 Convention;
+prazepam;_;C1CC1CN2C(=O)CN=C(C3=C2C=CC(=C3)Cl)C4=CC=CC=C4;Psychotropic;1971 Convention;
+temazepam;_;CN1C2=C(C=C(C=C2)Cl)C(=NC(C1=O)O)C3=CC=CC=C3;Psychotropic;1971 Convention;
+alprazolam;_;CC1=NN=C2N1C3=C(C=C(C=C3)Cl)C(=NC2)C4=CC=CC=C4;Psychotropic;1971 Convention;
+bromazepam;_;C1C(=O)NC2=C(C=C(C=C2)Br)C(=N1)C3=CC=CC=N3;Psychotropic;1971 Convention;
+camazepam;_;CN1C2=C(C=C(C=C2)Cl)C(=NC(C1=O)OC(=O)N(C)C)C3=CC=CC=C3;Psychotropic;1971 Convention;
+clobazam;_;CN1C(=O)CC(=O)N(C2=C1C=CC(=C2)Cl)C3=CC=CC=C3;Psychotropic;1971 Convention;
+cloxazolam;_;C1COC2(N1CC(=O)NC3=C2C=C(C=C3)Cl)C4=CC=CC=C4Cl;Psychotropic;1971 Convention;
+estazolam;_;C1C2=NN=CN2C3=C(C=C(C=C3)Cl)C(=N1)C4=CC=CC=C4;Psychotropic;1971 Convention;
+flunitrazepam;_;CN1C(=O)CN=C(C2=C1C=CC(=C2)[N+](=O)[O-])C3=CC=CC=C3F;Psychotropic;1971 Convention;
+fludiazepam;_;CN1C(=O)CN=C(C2=C1C=CC(=C2)Cl)C3=CC=CC=C3F;Psychotropic;1971 Convention;
+ketazolam;_;CC1=CC(=O)N2CC(=O)N(C3=C(C2(O1)C4=CC=CC=C4)C=C(C=C3)Cl)C;Psychotropic;1971 Convention;
+nimetazepam;_;CN1C(=O)CN=C(C2=C1C=CC(=C2)[N+](=O)[O-])C3=CC=CC=C3;Psychotropic;1971 Convention;
+nordazepam;_;C1C(=O)NC2=C(C=C(C=C2)Cl)C(=N1)C3=CC=CC=C3;Psychotropic;1971 Convention;
+pinazepam;_;C#CCN1C(=O)CN=C(C2=C1C=CC(=C2)Cl)C3=CC=CC=C3;Psychotropic;1971 Convention;
+triazolam;_;CC1=NN=C2N1C3=C(C=C(C=C3)Cl)C(=NC2)C4=CC=CC=C4Cl;Psychotropic;1971 Convention;
+tetrazepam;_;CN1C(=O)CN=C(C2=C1C=CC(=C2)Cl)C3=CCCCC3;Psychotropic;1971 Convention;
+chlorazepate;_;C1=CC=C(C=C1)C2=NC(C(=O)NC3=C2C=C(C=C3)Cl)C(=O)O;Psychotropic;1971 Convention;
+chlordiazepoxide;_;CN=C1CN(C(=C2C=C(C=CC2=N1)Cl)C3=CC=CC=C3)O;Psychotropic;1971 Convention;
+clonazepam;_;C1C(=O)NC2=C(C=C(C=C2)[N+](=O)[O-])C(=N1)C3=CC=CC=C3Cl;Psychotropic;1971 Convention;
+diazepam;_;CN1C(=O)CN=C(C2=C1C=CC(=C2)Cl)C3=CC=CC=C3;Psychotropic;1971 Convention;
+flurazepam;_;CCN(CC)CCN1C(=O)CN=C(C2=C1C=CC(=C2)Cl)C3=CC=CC=C3F;Psychotropic;1971 Convention;
+lorazepam;_;C1=CC=C(C(=C1)C2=NC(C(=O)NC3=C2C=C(C=C3)Cl)O)Cl;Psychotropic;1971 Convention;
+medazepam;_;CN1CCN=C(C2=C1C=CC(=C2)Cl)C3=CC=CC=C3;Psychotropic;1971 Convention;
+nitrazepam;_;C1C(=O)NC2=C(C=C(C=C2)[N+](=O)[O-])C(=N1)C3=CC=CC=C3;Psychotropic;1971 Convention;
+oxazepam;_;C1=CC=C(C=C1)C2=NC(C(=O)NC3=C2C=C(C=C3)Cl)O;Psychotropic;1971 Convention;
+oxazolam;_;CC1CN2CC(=O)NC3=C(C2(O1)C4=CC=CC=C4)C=C(C=C3)Cl;Psychotropic;1971 Convention;
+prazepam;_;C1CC1CN2C(=O)CN=C(C3=C2C=CC(=C3)Cl)C4=CC=CC=C4;Psychotropic;1971 Convention;
+temazepam;_;CN1C2=C(C=C(C=C2)Cl)C(=NC(C1=O)O)C3=CC=CC=C3;Psychotropic;1971 Convention;
+Phentermine;_;CC(C)(CC1=CC=CC=C1)N;Psychotropic;1971 Convention;
+Phendimetrazine;_;CC1C(OCCN1C)C2=CC=CC=C2;Psychotropic;1971 Convention;
+Mazindol;_;C1CN2C(=N1)C3=CC=CC=C3C2(C4=CC=C(C=C4)Cl)O;Psychotropic;1971 Convention;
+Benzfetamine;_;CC(CC1=CC=CC=C1)N(C)CC2=CC=CC=C2;Psychotropic;1971 Convention;
+Dextropropoxyphene preparations;_;_;Narcotic;1961 Convention;
+1-[1-(2-thienyl) cyclohexyl] piperidine (TCP, Tenocyclidine);_;_;Psychotropic;1971 Convention;
+N-ethyl-1-phenylcyclohexylamine (PCE);_;_;Psychotropic;1971 Convention;
+1-(1-phenylcyclohexyl) pyrrolidine (PHP or PCPY);_;_;Psychotropic;1971 Convention;
+Mecloqualone;_;CC1=NC2=CC=CC=C2C(=O)N1C3=CC=CC=C3Cl;Psychotropic;1971 Convention;
+Tilidine;_;CCOC(=O)C1(CCC=CC1N(C)C)C2=CC=CC=C2;Psychotropic;1971 Convention;
+Sufentanil;_;CCC(=O)N(C1=CC=CC=C1)C2(CCN(CC2)CCC3=CC=CS3)COC;Narcotic;1961 Convention;
+dextropropoxphene;_;_;Narcotic;1961 Convention;
+Methaqualcne (rescheduling);_;_;Psychotropic;1971 Convention;
+Nicocodine;_;CN1CCC23C4C1CC5=C2C(=C(C=C5)OC)OC3C(C=C4)OC(=O)C6=CN=CC=C6;Narcotic;1961 Convention;
+Sufentanil;_;CCC(=O)N(C1=CC=CC=C1)C2(CCN(CC2)CCC3=CC=CS3)COC;Narcotic;1961 Convention;
+Secobarbital and meprobamate (rescheduling);_;_;Narcotic;1961 Convention ;
+salts in Schedules I-IV;_;_;Psychotropic;1971 Convention;
+"tetrahydrocannabinol, the following isomers: 
+\Delta\ 6a(10a), \Delta\ 6a(7), \Delta\ 7, \Delta\ 8, \Delta\ 9, \Delta\ 10, \Delta\ 9(11), and their stereochemical variant";_;_;Psychotropic;1971 Convention;
+LSD (LSD-25, d-lysergic acid diethylamide);_;_;Psychotropic;1971 Convention;
+salts of the substances listed in Schedules I-IV of the 1971 Convention;_;_;Psychotropic;1971 Convention;
+Propiram preparations;_;_;Psychotropic;1971 Convention;
+Difenoxin;_;C1CN(CCC1(C2=CC=CC=C2)C(=O)O)CCC(C#N)(C3=CC=CC=C3)C4=CC=CC=C4;Narcotic;1961 Convention;
+Difenoxin preparations;_;_;Narcotic;1961 Convention;
+preparations containing diphenoxylate;_;_;Narcotic;1961 Convention;
+Drotebanol;_;CN1CCC23CC(CCC2(C1CC4=C3C(=C(C=C4)OC)OC)O)O;Narcotic;1961 Convention;
+Nicodicodine preparations;_;_;Narcotic;1961 Convention;
+Propiram;_;CCC(=O)N(C1=CC=CC=N1)C(C)CN2CCCCC2;Narcotic;1961 Convention;
+Amfepramone;_;CCN(CC)C(C)C(=O)C1=CC=CC=C1;Narcotic;1961 Convention;
+Amfetamine;_;CC(CC1=CC=CC=C1)N;Psychotropic;1971 Convention;
+Amobarbital;_;CCC1(C(=O)NC(=O)NC1=O)CCC(C)C;Psychotropic;1971 Convention;
+Barbital;_;CCC1(C(=O)NC(=O)NC1=O)CC;Psychotropic;1971 Convention;
+Cyclobarbital;_;CCC1(C(=O)NC(=O)NC1=O)C2=CCCCC2;Psychotropic;1971 Convention;
+DET;_;CCN(CC)C(=O)C1=CC=CC(=C1)C;Psychotropic;1971 Convention;
+Dexamfetamine;_;CC(CC1=CC=CC=C1)N;Psychotropic;1971 Convention;
+DMHP;_;CCCCCC(C)C(C)C1=CC(=C2C3=C(CCC(C3)C)C(OC2=C1)(C)C)O;Psychotropic;1971 Convention;
+DMT;_;_;Psychotropic;1971 Convention;
+Ethchlorvynol;_;CCC(C=CCl)(C#C)O;Psychotropic;1971 Convention;
+Ethinamate;_;C#CC1(CCCCC1)OC(=O)N;Psychotropic;1971 Convention;
+Glutethimide;_;CCC1(CCC(=O)NC1=O)C2=CC=CC=C2;Psychotropic;1971 Convention;
+Lefetamine;_;CN(C)C(CC1=CC=CC=C1)C2=CC=CC=C2;Psychotropic;1971 Convention;
+(+)-Lysergide (LSD, LSD-25);_;_;Psychotropic;1971 Convention;
+Meprobamate;_;CCCC(C)(COC(=O)N)COC(=O)N;Psychotropic;1971 Convention;
+Mescaline;_;COC1=CC(=CC(=C1OC)OC)CCN;Psychotropic;1971 Convention;
+Methamphetamine;_;CC(CC1=CC=CC=C1)NC;Psychotropic;1971 Convention;
+Methaqualone;_;CC1=CC=CC=C1N2C(=NC3=CC=CC=C3C2=O)C;Psychotropic;1971 Convention;
+Methylphenidate;_;COC(=O)C(C1CCCCN1)C2=CC=CC=C2;Psychotropic;1971 Convention;
+Methylphenobarbital;_;CCC1(C(=O)NC(=O)N(C1=O)C)C2=CC=CC=C2;Psychotropic;1971 Convention;
+Methyprylon;_;CCC1(C(=O)C(CNC1=O)C)CC;Psychotropic;1971 Convention;
+Parahexyl;_;CCCCCCC1=CC(=C2C3=C(CCC(C3)C)C(OC2=C1)(C)C)O;Psychotropic;1971 Convention;
+Pentobarbital;_;CCCC(C)C1(C(=O)NC(=O)NC1=O)CC;Psychotropic;1971 Convention;
+Phencyclidine;_;C1CCC(CC1)(C2=CC=CC=C2)N3CCCCC3;Psychotropic;1971 Convention;
+Phenmetrazine;_;CC1C(OCCN1)C2=CC=CC=C2;Psychotropic;1971 Convention;
+Phenobarbital;_;CCC1(C(=O)NC(=O)NC1=O)C2=CC=CC=C2;Psychotropic;1971 Convention;
+Pipradrol;_;C1CCNC(C1)C(C2=CC=CC=C2)(C3=CC=CC=C3)O;Psychotropic;1971 Convention;
+SPA;_;_;Psychotropic;1971 Convention;
+Psilocine, psilotsin;_;_;Psychotropic;1971 Convention;
+Psilocybine;_;CN(C)CCC1=CNC2=C1C(=CC=C2)OP(=O)(O)O;Psychotropic;1971 Convention;
+Secobarbital;_;CCCC(C)C1(C(=O)NC(=O)NC1=O)CC=C;Psychotropic;1971 Convention;
+STP, DOM;_;_;Psychotropic;1971 Convention;
+Tetrahydrocannabinol, all isomers (dronabinol);_;_;Psychotropic;1971 Convention;
+Bezitramide and its salts;_;_;Narcotic;1961 Convention;
+Acetorphine;_;CCCC(C)(C1CC23C=CC1(C4C25CCN(C3CC6=C5C(=C(C=C6)OC(=O)C)O4)C)OC)O;Narcotic;1961 Convention;
+Codoxime;_;CN1CCC23C4C1CC5=C2C(=C(C=C5)OC)OC3C(=NOCC(=O)O)CC4;Narcotic;1961 Convention;
+Etorphine;_;CCCC(C)(C1CC23C=CC1(C4C25CCN(C3CC6=C5C(=C(C=C6)O)O4)C)OC)O;Narcotic;1961 Convention;
+“Any other product obtained from any of the phenanthrene alkaloids of opium or ecgonine alkaloids of the coca leaf, not listed in Schedule I or II, and neither made nor utilized exclusively for authorized domestic research, unless the Government concerned finds that the product in question does not have morphine-like or cocaine-like effect”;_;_;Narcotic;1961 Convention;
+Acetorphine;_;CCCC(C)(C1CC23C=CC1(C4C25CCN(C3CC6=C5C(=C(C=C6)OC(=O)C)O4)C)OC)O;Narcotic;1961 Convention;
+Etorphine;_;CCCC(C)(C1CC23C=CC1(C4C25CCN(C3CC6=C5C(=C(C=C6)O)O4)C)OC)O;Narcotic;1961 Convention;
+cyprenorphine;_;CC(C)(C1CC23C=CC1(C4C25CCN(C3CC6=C5C(=C(C=C6)O)O4)CC7CC7)OC)O;;1962 Convention;
+Nicodicodine and its salts;_;_;Narcotic;1961 Convention;
+LSD-25;_;CCN(CC)C(=O)C1CN(C2CC3=CNC4=CC=CC(=C34)C2=C1)C;Narcotic;1961 Convention;
+Piritramide;_;C1CCN(CC1)C2(CCN(CC2)CCC(C#N)(C3=CC=CC=C3)C4=CC=CC=C4)C(=O)N;Narcotic;;
+Fentanyl;_;CCC(=O)N(C1CCN(CC1)CCC2=CC=CC=C2)C3=CC=CC=C3;Narcotic;1961 Convention;
+Methadone intermediate;_;CC(CC(C#N)(C1=CC=CC=C1)C2=CC=CC=C2)N(C)C;Narcotic;1961 Convention;
+Moramide intermediate;_;CC(CN1CCOCC1)C(C2=CC=CC=C2)(C3=CC=CC=C3)C(=O)O;Narcotic;1961 Convention;
+Noracymethadol;_;CCC(C(CC(C)NC)(C1=CC=CC=C1)C2=CC=CC=C2)OC(=O)C;Narcotic;1961 Convention;
+Norpipanone;_;CCC(=O)C(CCN1CCCCC1)(C2=CC=CC=C2)C3=CC=CC=C3;Narcotic;1961 Convention;
+Pethidine intermediate A;_;CN1CCC(CC1)(C#N)C2=CC=CC=C2;Narcotic;1961 Convention;
+Pethidine intermediate B;_;CCOC(=O)C1(CCNCC1)C2=CC=CC=C2;Narcotic;1961 Convention;
+Pethidine-intermediate-C;_;_;Narcotic;1961 Convention;
+Nicocodine;_;CN1CCC23C4C1CC5=C2C(=C(C=C5)OC)OC3C(C=C4)OC(=O)C6=CN=CC=C6;Narcotic;1961 Convention;
+Dextropropoxyphene ((+)-4-dimethylamino-3-methyl-1,2-diphenyl-2-propionoxybutane);_;_;Narcotic;1961 Convention;
+dextropropoxyphene;_;CCC(=O)OC(CC1=CC=CC=C1)(C2=CC=CC=C2)C(C)CN(C)C;Narcotic;1961 Convention;
+Acetyldihydrocodeine;_;CC(=O)OC1CCC2C3CC4=C5C2(C1OC5=C(C=C4)OC)CCN3C;Narcotic;1961 Convention;
+Acetyldihydrocodeine preparations;_;_;Narcotic;1961 Convention;
+Acetylmethadol;_;CCC(C(CC(C)N(C)C)(C1=CC=CC=C1)C2=CC=CC=C2)OC(=O)C;Narcotic;1961 Convention;
+Allylprodine;_;CCC(=O)OC1(CCN(CC1CC=C)C)C2=CC=CC=C2;Narcotic;1961 Convention;
+Alphacetylmethadol;_;CCC(C(CC(C)N(C)C)(C1=CC=CC=C1)C2=CC=CC=C2)OC(=O)C;Narcotic;1961 Convention;
+Alphameprodine;_;CCC1CN(CCC1(C2=CC=CC=C2)OC(=O)CC)C;Narcotic;1961 Convention;
+Alphamethadol;_;CCC(C(CC(C)N(C)C)(C1=CC=CC=C1)C2=CC=CC=C2)O;Narcotic;1961 Convention;
+Alphaprodine;_;CCC(=O)OC1(CCN(CC1C)C)C2=CC=CC=C2;Narcotic;1961 Convention;
+Anileridine;_;CCOC(=O)C1(CCN(CC1)CCC2=CC=C(C=C2)N)C3=CC=CC=C3;Narcotic;1961 Convention;
+Benzethidine;_;CCOC(=O)C1(CCN(CC1)CCOCC2=CC=CC=C2)C3=CC=CC=C3;Narcotic;1961 Convention;
+Benzylmorphine;_;CN1CCC23C4C1CC5=C2C(=C(C=C5)OCC6=CC=CC=C6)OC3C(C=C4)O;Narcotic;1961 Convention;
+Betacetylmethadol;_;CCC(C(CC(C)N(C)C)(C1=CC=CC=C1)C2=CC=CC=C2)OC(=O)C;Narcotic;1961 Convention;
+Betameprodine;_;CCC1CN(CCC1(C2=CC=CC=C2)OC(=O)CC)C;Narcotic;1961 Convention;
+Betamethadol;_;CCC(C(CC(C)N(C)C)(C1=CC=CC=C1)C2=CC=CC=C2)O;Narcotic;1961 Convention;
+Betaprodine;_;CCC(=O)OC1(CCN(CC1C)C)C2=CC=CC=C2;Narcotic;1961 Convention;
+Cannabis and cannabis resin;_;_;Narcotic;1961 Convention;
+Cannabis and cannabis resin and extracts and tinctures of cannabis;_;_;Narcotic;1961 Convention;
+Clonitazene;_;CCN(CC)CCN1C2=C(C=C(C=C2)[N+](=O)[O-])N=C1CC3=CC=C(C=C3)Cl;Narcotic;1961 Convention;
+Coca leaf;_;_;Narcotic;1961 Convention;
+Cocaine;_;CN1C2CCC1C(C(C2)OC(=O)C3=CC=CC=C3)C(=O)OC;Narcotic;1961 Convention;
+Cocaine preparations;_;_;Narcotic;1961 Convention;
+Codeine;_;CN1CCC23C4C1CC5=C2C(=C(C=C5)OC)OC3C(C=C4)O;Narcotic;1961 Convention;
+Codeine preparations;_;_;Narcotic;1961 Convention;
+Concentrate of poppy straw;_;_;Narcotic;1961 Convention;
+Desomorphine;_;CN1CCC23C4C1CC5=C2C(=C(C=C5)O)OC3CCC4;Narcotic;1961 Convention;
+Dextromoramide;_;CC(CN1CCOCC1)C(C2=CC=CC=C2)(C3=CC=CC=C3)C(=O)N4CCCC4;Narcotic;1961 Convention;
+Dextropropoxyphene;_;CCC(=O)OC(CC1=CC=CC=C1)(C2=CC=CC=C2)C(C)CN(C)C;Narcotic;1961 Convention;
+Dextropropoxyphene preparations;_;_;Narcotic;1961 Convention;
+Diampromide;_;CCC(=O)N(CC(C)N(C)CCC1=CC=CC=C1)C2=CC=CC=C2;Narcotic;1961 Convention;
+Diethylthiambutene;_;CCN(CC)C(C)C=C(C1=CC=CS1)C2=CC=CS2;Narcotic;1961 Convention;
+Dihydrocodeine;_;CN1CCC23C4C1CC5=C2C(=C(C=C5)OC)OC3C(CC4)O;Narcotic;1961 Convention;
+Dihydrocodeine preparations;_;_;Narcotic;1961 Convention;
+Dihydromorphine;_;CN1CCC23C4C1CC5=C2C(=C(C=C5)O)OC3C(CC4)O;Narcotic;1961 Convention;
+Dimenoxadol;_;CCOC(C1=CC=CC=C1)(C2=CC=CC=C2)C(=O)OCCN(C)C;Narcotic;1961 Convention;
+Dimepheptanol;_;CCC(C(CC(C)N(C)C)(C1=CC=CC=C1)C2=CC=CC=C2)O;Narcotic;1961 Convention;
+Dimethylthiambutene;_;CC(C=C(C1=CC=CS1)C2=CC=CS2)N(C)C;Narcotic;1961 Convention;
+Dioxaphetyl butyrate;_;CCOC(=O)C(CCN1CCOCC1)(C2=CC=CC=C2)C3=CC=CC=C3;Narcotic;1961 Convention;
+Diphenoxylate;_;CCOC(=O)C1(CCN(CC1)CCC(C#N)(C2=CC=CC=C2)C3=CC=CC=C3)C4=CC=CC=C4;Narcotic;1961 Convention;
+Diphenoxylate preparations;_;_;Narcotic;1961 Convention;
+Dipipanone;_;CCC(=O)C(CC(C)N1CCCCC1)(C2=CC=CC=C2)C3=CC=CC=C3;Narcotic;1961 Convention;
+Ecgonine, its esters and derivatives which  are convertible to ecgonine and cocaine;_;_;Narcotic;1961 Convention;
+Ethylmethylthiambutene;_;CCN(C)C(C)C=C(C1=CC=CS1)C2=CC=CS2;Narcotic;1961 Convention;
+Ethylmorphine;_;CCOC1=C2C3=C(CC4C5C3(CCN4C)C(O2)C(C=C5)O)C=C1;Narcotic;1961 Convention;
+Ethylmorphine preparations;_;_;Narcotic;1961 Convention;
+Etonitazene;_;CCN(CC)CCN1C2=C(C=C(C=C2)[N+](=O)[O-])N=C1CC3=CC=C(C=C3)OCC;Narcotic;1961 Convention;
+Etoxeridine;_;CCOC(=O)C1(CCN(CC1)CCOCCO)C2=CC=CC=C2;Narcotic;1961 Convention;
+Furethidine;_;CCOC(=O)C1(CCN(CC1)CCOCC2CCCO2)C3=CC=CC=C3;Narcotic;1961 Convention;
+Heroin;_;CC(=O)OC1C=CC2C3CC4=C5C2(C1OC5=C(C=C4)OC(=O)C)CCN3C;Narcotic;1961 Convention;
+Hydrocodone;_;CN1CCC23C4C1CC5=C2C(=C(C=C5)OC)OC3C(=O)CC4;Narcotic;1961 Convention;
+Hydromorphinol;_;CN1CCC23C4C(CCC2(C1CC5=C3C(=C(C=C5)O)O4)O)O;Narcotic;1961 Convention;
+Hydromorphone;_;CN1CCC23C4C1CC5=C2C(=C(C=C5)O)OC3C(=O)CC4;Narcotic;1961 Convention;
+Hydroxypethidine;_;CCOC(=O)C1(CCN(CC1)C)C2=CC(=CC=C2)O;Narcotic;1961 Convention;
+Isomethadone;_;CCC(=O)C(C1=CC=CC=C1)(C2=CC=CC=C2)C(C)CN(C)C;Narcotic;1961 Convention;
+Ketobemidone;_;CCC(=O)C1(CCN(CC1)C)C2=CC(=CC=C2)O;Narcotic;1961 Convention;
+Levomethorphanj;_;_;Narcotic;1961 Convention;
+Levomoramide;_;CC(CN1CCOCC1)C(C2=CC=CC=C2)(C3=CC=CC=C3)C(=O)N4CCCC4;Narcotic;1961 Convention;
+Levophenacylmorphan;_;C1CCC23CCN(C(C2C1)CC4=C3C=C(C=C4)O)CC(=O)C5=CC=CC=C5;Narcotic;1961 Convention;
+Levorphanolj;_;_;Narcotic;1961 Convention;
+Metazocine;_;CC1C2CC3=C(C1(CCN2C)C)C=C(C=C3)O;Narcotic;1961 Convention;
+Methadone;_;CCC(=O)C(CC(C)N(C)C)(C1=CC=CC=C1)C2=CC=CC=C2;Narcotic;1961 Convention;
+Methyldesorphine;_;CC1=CCC2C3CC4=C5C2(C1OC5=C(C=C4)O)CCN3C;Narcotic;1961 Convention;
+Methyldihydromorphine;_;CC1(CCC2C3CC4=C5C2(C1OC5=C(C=C4)O)CCN3C)O;Narcotic;1961 Convention;
+Metopon;_;CC12C(=O)CCC3C14CCN(C3CC5=C4C(=C(C=C5)O)O2)C;Narcotic;1961 Convention;
+Morpheridine;_;CCOC(=O)C1(CCN(CC1)CCN2CCOCC2)C3=CC=CC=C3;Narcotic;1961 Convention;
+Morphine;_;CN1CCC23C4C1CC5=C2C(=C(C=C5)O)OC3C(C=C4)O;Narcotic;1961 Convention;
+Morphine methobromide and other pentavalent nitrogen morphine derivatives;_;_;Narcotic;1961 Convention;
+Morphine-N-oxide;_;C[N+]1(CCC23C4C1CC5=C2C(=C(C=C5)O)OC3C(C=C4)O)[O-];Narcotic;1961 Convention;
+Morphine preparations;_;_;Narcotic;1961 Convention;
+Myrophine;_;CCCCCCCCCCCCCC(=O)OC1C=CC2C3CC4=C5C2(C1OC5=C(C=C4)OCC6=CC=CC=C6)CCN3C;Narcotic;1961 Convention;
+Nicomorphine;_;CN1CCC23C4C1CC5=C2C(=C(C=C5)OC(=O)C6=CN=CC=C6)OC3C(C=C4)OC(=O)C7=CN=CC=C7;Narcotic;1961 Convention;
+Norcodeine;_;COC1=C2C3=C(CC4C5C3(CCN4)C(O2)C(C=C5)O)C=C1;Narcotic;1961 Convention;
+Norcodeine preparations;_;_;Narcotic;1961 Convention;
+Norlevorphanol;_;C1CCC23CCNC(C2C1)CC4=C3C=C(C=C4)O;Narcotic;1961 Convention;
+Normethadone;_;CCC(=O)C(CCN(C)C)(C1=CC=CC=C1)C2=CC=CC=C2;Narcotic;1961 Convention;
+Normorphine;_;C1CNC2CC3=C4C15C2C=CC(C5OC4=C(C=C3)O)O;Narcotic;1961 Convention;
+Opium;_;_;Narcotic;1961 Convention;
+Opium preparations;_;_;Narcotic;1961 Convention;
+Oxycodone;_;CN1CCC23C4C(=O)CCC2(C1CC5=C3C(=C(C=C5)OC)O4)O;Narcotic;1961 Convention;
+Oxymorphone;_;CN1CCC23C4C(=O)CCC2(C1CC5=C3C(=C(C=C5)O)O4)O;Narcotic;1961 Convention;
+Pethidine;_;CCOC(=O)C1(CCN(CC1)C)C2=CC=CC=C2;Narcotic;1961 Convention;
+Phenadoxone;_;CCC(=O)C(CC(C)N1CCOCC1)(C2=CC=CC=C2)C3=CC=CC=C3;Narcotic;1961 Convention;
+Phenampromide;_;CCC(=O)N(C1=CC=CC=C1)C(C)CN2CCCCC2;Narcotic;1961 Convention;
+Phenazocine;_;CC1C2CC3=C(C1(CCN2CCC4=CC=CC=C4)C)C=C(C=C3)O;Narcotic;1961 Convention;
+Phenomorphan;_;C1CCC23CCN(C(C2C1)CC4=C3C=C(C=C4)O)CCC5=CC=CC=C5;Narcotic;1961 Convention;
+Phenoperidine;_;CCOC(=O)C1(CCN(CC1)CCC(C2=CC=CC=C2)O)C3=CC=CC=C3;Narcotic;1961 Convention;
+Pholcodine;_;CN1CCC23C4C1CC5=C2C(=C(C=C5)OCCN6CCOCC6)OC3C(C=C4)O;Narcotic;1961 Convention;
+The isomers, unless specifically excepted, of the drugs in the Schedule II;_;_;Narcotic;1961 Convention;
+The salts of the drugs listed in the Schedule II;_;_;Narcotic;1961 Convention;
+Pholcodine preparations;_;_;Narcotic;1961 Convention;
+Piminodine;_;CCOC(=O)C1(CCN(CC1)CCCNC2=CC=CC=C2)C3=CC=CC=C3;Narcotic;1961 Convention;
+Proheptazine;_;CCC(=O)OC1(CCCN(CC1C)C)C2=CC=CC=C2;Narcotic;1961 Convention;
+Properidine;_;CC(C)OC(=O)C1(CCN(CC1)C)C2=CC=CC=C2;Narcotic;1961 Convention;
+Pulvis ipecacuanhae et opii compositus;_;_;Narcotic;1961 Convention;
+Preparations conforming to any of the formulae listed in the Schedule III and mixtures of such preparations with any material which contains no drug;_;_;Narcotic;1961 Convention;
+Racemethorphan;_;CN1CCC23CCCCC2C1CC4=C3C=C(C=C4)OC;Narcotic;1961 Convention;
+Racemoramide;_;CC(CN1CCOCC1)C(C2=CC=CC=C2)(C3=CC=CC=C3)C(=O)N4CCCC4;Narcotic;1961 Convention;
+Racemorphan;_;CN1CCC23CCCCC2C1CC4=C3C=C(C=C4)O;Narcotic;1961 Convention;
+Thebacon;_;CC(=O)OC1=CCC2C3CC4=C5C2(C1OC5=C(C=C4)OC)CCN3C;Narcotic;1961 Convention;
+Thebaine;_;CN1CCC23C4C(=CC=C2C1CC5=C3C(=C(C=C5)OC)O4)OC;Narcotic;1961 Convention;
+Trimeperidine;_;CCC(=O)OC1(CC(N(CC1C)C)C)C2=CC=CC=C2;Narcotic;1961 Convention;
+The isomers, unless specifically excepted, of the drugs in the Schedule I;_;_;Narcotic;1961 Convention;
+The esters and ethers, unless appearing in another Schedule, of the drugs in the Schedule I;_;_;Narcotic;1961 Convention;
+The salts of the drugs listed in the Schedule I, including the salts of esters, ethers and isomers as provided above;_;_;Narcotic;1961 Convention;
+The salts of the drugs listed in the Schedule IV;_;_;Narcotic;1961 Convention;
