@@ -1,108 +1,81 @@
-from dash import html, dcc, Input, Output, State, callback, dash_table
-import pandas as pd
+from dash import html, dcc
 import dash_bootstrap_components as dbc
+import pandas as pd
 
-# Charger la base de données 
+#Charger la base de données
 df = pd.read_csv("data/donnees.csv", sep=";", encoding="utf-8")
+# Nettoyer les noms de colonnes : tout en minuscules, sans espaces
+df.columns = [col.lower().replace(" ", "_").strip() for col in df.columns]
 
-# Renommer les colonnes pour éviter les espaces
-df.columns = [col.lower().replace(" ", "").strip() for col in df.columns]
-
+# Fonction principale pour construire l'interface utilisateur
 def get_main_layout():
-    return html.Div([
-        html.H2("Main Interface", className="text-success text-center mt-4"),
-
-        html.Div([
-            html.Label("Please enter a substance:", className="fw-bold mb-2"),
-        # Zone de saisie pour la recherche d'informations
-            dcc.Input(
-                id="input-substance",
-                type="text",
-                placeholder="e.g., acetone",
-                debounce=True,
-                className="form-control"
+# Barre de recherche avec bouton Draw, champ de saisie et bouton Search
+    search_bar = dbc.Row(
+        [
+            # Bouton pour ouvrir la zone de dessin
+            dbc.Col(
+                dbc.Button("Draw", color="success", className="ms-2", id="draw-button"),
+                width="auto",
+                style={"marginTop": "35px","marginLeft": "30px"}
             ),
-        ], className="mb-4"),
-       #Zone d'affichage des résultats
-        html.Div(id="substance-details", className="mt-3"),
-
-        html.H4("Draw your structure here", className="text-primary mt-4"),
-       #Zone pour dessiner la molécule
-        html.Div(className="border border-2 border-secondary rounded w-100 h-100", id="drawing-box"),
-       #Bouton pour retourner à la page d'accueil
-         dbc.Button("Back to Homepage", id="back-button", color="secondary", className="mt-4"),
-
-        html.Hr(),
-
-        dbc.DropdownMenu(
-            label="Menu",
-            children=[
-                dbc.DropdownMenuItem("View the database", id="menu-show-table")
-            ],
-            color="info",
-            className="mb-3"
-        ),
-
-        dbc.Collapse(
-            dash_table.DataTable(
-                id='table-database',
-                columns=[{"name": col, "id": col} for col in df.columns],
-                data=df.to_dict('records'),
-                page_size=10,
-                style_table={
-                    'maxHeight': '300px',
-                    'overflowY': 'auto',
-                    'overflowX': 'auto'
-                },
-                style_cell={
-                    'textAlign': 'left',
-                    'padding': '5px'
-                },
-                style_header={
-                    'backgroundColor': '#f8f9fa',
-                    'fontWeight': 'bold'
-                }
+            # Zone de saisie du nom de la substance
+            dbc.Col(
+                dcc.Input(
+                    id="input-substance",
+                    type="text",
+                    placeholder="Enter substance name...",
+                    debounce=True,
+                    className="form-control"
+                ),
+                style={"marginTop": "35px", "marginLeft": "10px", "width": "90px"}
             ),
-            id="collapse-table",
-            is_open=False
-        )
-    ], className="container")
-
-@callback(
-    Output("substance-details", "children"),
-    Input("input-substance", "value")
-)
-# Fonction pour afficher les résultats de la molécule saisie dans la zone de recherche
-def display_info(substance):
-    if not substance:
-        return ""
-
-    resultats = df[df['substance_name'].str.lower() == substance.lower()]
-
-    if resultats.empty:
-        return dbc.Alert("Substance not found.", color="danger", className="mt-2")
-# sélectionne la première ligne de resultats
-    ligne = resultats.iloc[0]
-    nom = ligne['substance_name']
-
-    return html.Div([
-        html.H5(f"Here are the details of {nom} :", className="text-info"),
-        html.Ul([
-            html.Li(f"CAS number : {ligne['cas_number']}"),
-            html.Li(f"SMILES : {ligne['smiles']}"),
-            html.Li(f"Legal status : {ligne['legal_status']}"),
-            html.Li(f"Convention : {ligne['convention']}"),
-            html.Li(f"Schedule or Table : {ligne['schedule_or_table']}")
-        ], className="ms-3")
+            # Bouton de recherche
+            dbc.Col(
+                dbc.Button("Search", color="success", className="ms-2", id="search-button", n_clicks=0),
+                width="auto",
+                style={"marginTop": "35px","marginLeft": "30px"}
+            )
+        ],
+        className="g-0 flex-nowrap mt-3 mt-md-0",
+        align="center"
+    )
+# Barre latérale avec menu vertical
+    sidebar = dbc.Nav([
+        html.H2("Menu", style={"color": "white", "fontSize": "36px"}), # Titre du menu
+        html.Hr(),# Ligne de séparation
+        dbc.NavLink("DataBase", href="#", active=True, style={"color": "white","backgroundColor":"#1E5631"}),
+        dbc.NavLink("Help", href="#", active=True, style={"color": "white","backgroundColor":"#1E5631"})
+    ],
+        vertical=True,
+        pills=True,
+        className="sidebar" #  Classe personnalisée définie dans sidebar.css
+    )
+ # Fenêtre modale pour dessiner une molécule
+    draw_modal = dbc.Modal(
+        [
+            dbc.ModalHeader("Draw Structure"), # Titre de la modale
+            dbc.ModalBody( # Zone vide 
+                html.Div("Drawing area", style={
+                    "border": "2px dashed #aaa",
+                    "height": "200px",
+                    "width": "100%",
+                    "backgroundColor": "#F0F2F5"
+                })
+            ),
+            dbc.ModalFooter( 
+                dbc.Button("Close", id="close-draw", className="ms-auto", n_clicks=0, color="success")
+            )
+        ],
+        id="modal-draw",
+        is_open=False,# Fermé par défaut
+        size="lg" # Grande taille
+    )
+# Retourne l'organisation de la page en deux colonnes : sidebar et contenu principal
+    return dbc.Row([
+        dbc.Col(sidebar, width=2),# Colonne pour la barre latérale
+        dbc.Col([# Colonne principale
+            search_bar,
+            html.Div(id="substance-details", className="mt-4"),
+            draw_modal
+        ], width=10)
     ])
-
-@callback(
-    Output("collapse-table", "is_open"),
-    Input("menu-show-table", "n_clicks"),
-    State("collapse-table", "is_open")
-)
-# Fonction pour afficher ou cacher la base de donnée
-def  show_or_hide_table(n_clicks, is_open):
-    if n_clicks:
-        return not is_open
-    return is_open
