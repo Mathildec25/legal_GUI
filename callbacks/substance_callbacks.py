@@ -1,10 +1,9 @@
+# callbacks/substance_callbacks.py
+
 from dash import Input, Output, State
 import dash_bootstrap_components as dbc
-from utils.data_loader import load_clean_data
 
-df = load_clean_data()
-
-def register_main_callbacks(app):
+def register_callbacks(app, df):
     @app.callback(
         Output("substance-details", "children"),
         Input("input-substance", "value")
@@ -13,30 +12,33 @@ def register_main_callbacks(app):
         if not substance:
             return ""
 
-        resultats = df[df['substance_name'].str.lower() == substance.lower()]
-        if resultats.empty:
+        results = df[df['substance_name'].str.lower() == substance.lower()]
+        if results.empty:
             return dbc.Alert("Substance not found.", color="danger", className="mt-2")
 
-        ligne = resultats.iloc[0]
-        nom = ligne['substance_name']
-
-        return dbc.Container([
-            dbc.Container(f"Here are the details of {nom} :", className="text-info h5 mb-3"),
-            dbc.ListGroup([
-                dbc.ListGroupItem(f"CAS number : {ligne['cas_number']}"),
-                dbc.ListGroupItem(f"SMILES : {ligne['smiles']}"),
-                dbc.ListGroupItem(f"Legal status : {ligne['legal_status']}"),
-                dbc.ListGroupItem(f"Convention : {ligne['convention']}"),
-                dbc.ListGroupItem(f"Schedule or Table : {ligne['schedule_or_table']}")
-            ], flush=True)
-        ])
+        row = results.iloc[0]
+        return dbc.Card([
+            dbc.CardHeader(f"Here are the details of {row['substance_name']} :"),
+            dbc.CardBody(
+                dbc.ListGroup([
+                    dbc.ListGroupItem(f"CAS number : {row['cas_number']}"),
+                    dbc.ListGroupItem(f"SMILES : {row['smiles']}"),
+                    dbc.ListGroupItem(f"Legal status : {row['legal_status']}"),
+                    dbc.ListGroupItem(f"Convention : {row['convention']}"),
+                    dbc.ListGroupItem(f"Schedule or Table : {row['schedule_or_table']}"),
+                ])
+            )
+        ], className="mt-3")
 
     @app.callback(
-        Output("collapse-table", "is_open"),
-        Input("menu-show-table", "n_clicks"),
-        State("collapse-table", "is_open")
+        Output("modal-draw", "is_open"),
+        Input("draw-button", "n_clicks"),
+        Input("close-draw", "n_clicks"),
+        State("modal-draw", "is_open")
     )
-    def show_or_hide_table(n_clicks, is_open):
-        if n_clicks:
-            return not is_open
+    def toggle_modal(n_draw, n_close, is_open):
+        if n_close and n_close > 0:
+            return False
+        if n_draw and n_draw > 0:
+            return True
         return is_open
