@@ -1,0 +1,30 @@
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 60px;  /* largeur initiale compacte */
+    overflow-x: hidden;
+    background-color: #1E5631;  /* vert foncé */
+    transition: width 0.3s ease;
+    padding-top: 20px;
+    z-index: 1000;
+}
+
+/* Lors du survol de la sidebar, elle s'élargit */
+.sidebar:hover {
+    width: 250px;
+}
+
+/* Style des liens du menu (espacement, comportement texte) */
+.sidebar .nav-link {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-left: 1rem;
+}
+
+/* Lorsque non survolée, le texte est masqué */
+.sidebar:not(:hover) .nav-link {
+    text-indent: -9999px;
+}
