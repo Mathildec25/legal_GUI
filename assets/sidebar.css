@@ -3,20 +3,20 @@
     top: 0;
     left: 0;
     bottom: 0;
-    width: 60px;  /* compacte au départ */
+    width: 60px;  /* largeur initiale compacte */
     overflow-x: hidden;
-    background-color: #1E5631;
+    background-color:#0e7c7e;  
     transition: width 0.3s ease;
     padding-top: 20px;
     z-index: 1000;
 }
 
-/* Quand la souris survole la sidebar */
+/* Lors du survol de la sidebar, elle s'élargit */
 .sidebar:hover {
-    width: 250px;  /* elle s’élargit */
+    width: 250px;
 }
 
-/* Pour que les liens prennent plus d’espace quand on survole */
+/* Style des liens du menu (espacement, comportement texte) */
 .sidebar .nav-link {
     white-space: nowrap;
     overflow: hidden;
@@ -24,7 +24,7 @@
     padding-left: 1rem;
 }
 
-/* Pour cacher le texte si trop étroit */
+/* Lorsque non survolée, le texte est masqué */
 .sidebar:not(:hover) .nav-link {
-    text-indent: -9999px;  /* cache le texte */
+    text-indent: -9999px;
 }
