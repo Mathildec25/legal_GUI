@@ -56,7 +56,7 @@ def get_main_layout():
             pills=True,
         )
     ],
-    className="sidebar",  # ⬅️ Tu gardes bien ta classe ici
+    className="sidebar",  
     style={"height": "100vh"}
 )
 
