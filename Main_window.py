@@ -14,26 +14,35 @@ def get_main_layout():
         [
             # Bouton pour ouvrir la zone de dessin
             dbc.Col(
-                dbc.Button("Draw", color="success", className="ms-2", id="draw-button"),
+                dbc.Button("Draw", color="success", className="ms-2", id="draw-button",n_clicks=0),
                 width="auto",
-                style={"marginTop": "35px","marginLeft": "30px"}
+                style={"marginTop": "100px","marginLeft": "30px"}
             ),
             # Zone de saisie du nom de la substance
             dbc.Col(
-                dcc.Input(
-                    id="input-substance",
-                    type="text",
-                    placeholder="Enter substance name...",
-                    debounce=True,
-                    className="form-control"
-                ),
-                style={"marginTop": "35px", "marginLeft": "10px", "width": "90px"}
+            dcc.Dropdown(
+                id='input-substance',
+                options=[{"label": nom, "value": nom} for nom in sorted(df['substance_name'].unique())],
+                placeholder="Search or select a substance...",
+                searchable=True,
+                #style={"width": "100%"}
             ),
+                     style={"marginTop": "100px", "marginLeft": "10px", "width": "90px"} ),
+            #dbc.Col(
+               # dcc.Input(
+                   # id="input-substance",
+                    #type="text",
+                    #placeholder="Enter substance name...",
+                    #debounce=True,
+                    #className="form-control"
+                #),
+                #style={"marginTop": "100px", "marginLeft": "10px", "width": "90px"}
+           # ),
             # Bouton de recherche
             dbc.Col(
                 dbc.Button("Search", color="success", className="ms-2", id="search-button", n_clicks=0),
                 width="auto",
-                style={"marginTop": "35px","marginLeft": "30px"}
+                style={"marginTop": "100px","marginLeft": "10px"}
             )
         ],
         className="g-0 flex-nowrap mt-3 mt-md-0",
@@ -41,7 +50,7 @@ def get_main_layout():
     )
 # Barre latérale avec menu vertical
     sidebar = dbc.Nav([
-        html.H2("Menu", style={"color": "white", "fontSize": "36px"}), # Titre du menu
+        html.H3("Logo", style={"color": "white", "fontSize": "36px"}), # Titre du menu
         html.Hr(),# Ligne de séparation
         dbc.NavLink("DataBase", href="#", active=True, style={"color": "white","backgroundColor":"#1E5631"}),
         dbc.NavLink("Help", href="#", active=True, style={"color": "white","backgroundColor":"#1E5631"})
@@ -75,7 +84,7 @@ def get_main_layout():
         dbc.Col(sidebar, width=2),# Colonne pour la barre latérale
         dbc.Col([# Colonne principale
             search_bar,
-            html.Div(id="substance-details", className="mt-4"),
+            html.Div(id="substance-details", className="mt-4",style={"marginTop": "50px"}),
             draw_modal
         ], width=10)
     ])
