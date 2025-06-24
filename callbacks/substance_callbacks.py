@@ -1,44 +1,42 @@
-# callbacks/substance_callbacks.py
-
-from dash import Input, Output, State
+import pandas as pd
+from dash import Input, Output, State, callback, no_update
 import dash_bootstrap_components as dbc
+from utils.data_loader import load_clean_data
 
-def register_callbacks(app, df):
-    @app.callback(
-        Output("substance-details", "children"),
-        Input("input-substance", "value")
-    )
-    def display_info(substance):
-        if not substance:
-            return ""
+df = load_clean_data()
 
-        results = df[df['substance_name'].str.lower() == substance.lower()]
-        if results.empty:
-            return dbc.Alert("Substance not found.", color="danger", className="mt-2")
-
-        row = results.iloc[0]
-        return dbc.Card([
-            dbc.CardHeader(f"Here are the details of {row['substance_name']} :"),
-            dbc.CardBody(
-                dbc.ListGroup([
-                    dbc.ListGroupItem(f"CAS number : {row['cas_number']}"),
-                    dbc.ListGroupItem(f"SMILES : {row['smiles']}"),
-                    dbc.ListGroupItem(f"Legal status : {row['legal_status']}"),
-                    dbc.ListGroupItem(f"Convention : {row['convention']}"),
-                    dbc.ListGroupItem(f"Schedule or Table : {row['schedule_or_table']}"),
-                ])
-            )
-        ], className="mt-3")
-
+def register_main_callbacks(app):
     @app.callback(
         Output("modal-draw", "is_open"),
-        Input("draw-button", "n_clicks"),
-        Input("close-draw", "n_clicks"),
-        State("modal-draw", "is_open")
+        [Input("draw-button", "n_clicks"), Input("close-draw", "n_clicks"), Input("confirm-draw", "n_clicks")],
+        [State("modal-draw", "is_open")]
     )
-    def toggle_modal(n_draw, n_close, is_open):
-        if n_close and n_close > 0:
-            return False
-        if n_draw and n_draw > 0:
-            return True
+    def toggle_modal(n1, n2, n3, is_open):
+        if n1 or n2 or n3:
+            return not is_open
         return is_open
+
+    @app.callback(
+        Output("substance-details", "children"),
+        Input("store-drawn-smiles", "data"),
+        prevent_initial_call=True
+    )
+    def display_info_from_drawn_smiles(smiles):
+        if not smiles:
+            return dbc.Alert("No SMILES data received.", color="warning")
+
+        resultats = df[df['smiles'].str.strip() == smiles.strip()]
+        if resultats.empty:
+            return dbc.Alert("No match found in database.", color="danger")
+
+        ligne = resultats.iloc[0]
+        return dbc.Container([
+            dbc.Container(f"Here are the details of {ligne['substance_name']} :", className="text-info h5 mb-3"),
+            dbc.ListGroup([
+                dbc.ListGroupItem(f"CAS number : {ligne['cas_number']}"),
+                dbc.ListGroupItem(f"SMILES : {ligne['smiles']}"),
+                dbc.ListGroupItem(f"Legal status : {ligne['legal_status']}"),
+                dbc.ListGroupItem(f"Convention : {ligne['convention']}"),
+                dbc.ListGroupItem(f"Schedule or Table : {ligne['schedule_or_table']}")
+            ])
+        ])
