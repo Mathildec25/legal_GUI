@@ -1,0 +1,9 @@
+/*
+ * Ce fichier importe la bibliothèque Font Awesome via CDN.
+ * Font Awesome fournit des icônes vectorielles utilisées dans l'application Dash
+ * pour améliorer l'interface graphique (ex : loupe, crayon, base de données...).
+ *
+ * Exemple d'utilisation dans le code Dash :
+ * html.I(className="fas fa-search")
+ */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
