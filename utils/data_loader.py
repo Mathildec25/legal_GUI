@@ -9,7 +9,7 @@ def load_data(path: str = "data/donnees.csv") -> pd.DataFrame:
     :param path: Chemin vers le fichier CSV
     :return: DataFrame nettoyé
     """
-    df = pd.read_csv(path, sep=";", encoding="utf-8")
+    df = pd.read_csv(path, sep=",", encoding="utf-8")
 
     # Nettoyage des noms de colonnes
     df.columns = [col.lower().replace(" ", "_").strip() for col in df.columns]

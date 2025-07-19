@@ -6,7 +6,7 @@ import pandas as pd
 
 # Options pour le dropdown à partir de plusieurs colonnes
 options = []
-for col in ['substance_name', 'cas_number', 'smiles']:
+for col in ['name', 'cas', 'smiles', 'smiles_canonique']:
     for val in df[col]:
         if pd.notna(val):
             options.append({"label": val, "value": val})
