@@ -44,7 +44,7 @@
     transition: background-color 0.3s ease;
 }
 .navlink.active {
-    background-color: #066ab1 !important;  /* 👈 ton nouveau bleu plus doux */
+    background-color: #066ab1 !important;  /* ton nouveau bleu plus doux */
     color: white !important;
     border-radius: 10px;
 }
@@ -106,7 +106,7 @@
 
 /* Texte SafeLab toujours visible */
 .logo-text {
-    display: block; /* ✅ toujours visible */
+    display: block; /* toujours visible */
     text-align: center;
     font-weight: 700;
     font-size: 0.95rem;
@@ -115,6 +115,9 @@
     font-family: 'Poppins', sans-serif;
     letter-spacing: 0.5px;
 }
-body {
+body, #react-entry-point, .dash-app {
     background-color: #ebebeb;
+    min-height: 100vh;
 }
+
+

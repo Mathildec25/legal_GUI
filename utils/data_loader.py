@@ -2,7 +2,8 @@
 
 import pandas as pd
 
-def load_data(path: str = "data/donnees.csv") -> pd.DataFrame:
+def load_data(path: str = "C:/Users/user/legal_GUI/data/donnees.csv") -> pd.DataFrame:
+
     """
     Charge le fichier CSV des substances, nettoie les noms de colonnes.
 
