@@ -106,6 +106,7 @@ legal_GUI/
   **Pandas, Plotly, HTML/CSS, Font Awesome**
 
 ## Remarque
+Dans la section**Draw**, il est impératif d’utiliser un **SMILES canonique** pour garantir une détection correcte des substances et un affichage fiable des résultats juridiques.
 
 Les conditions de détection et d’affichage dans l’interface dépendent fortement :
 
