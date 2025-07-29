@@ -36,7 +36,9 @@ python app.py
 ## Fonctionnalités principales
 
 ° Recherche de substances par nom, numéro CAS ou SMILES
+
 ° Dessin de structures moléculaires via un éditeur intégré (Kekule.js), avec génération automatique du SMILES
+
 ° Affichage des informations juridiques liées à chaque substance :
 
    - Classification dans les annexes belges (stupéfiants, psychotropes)
@@ -48,7 +50,9 @@ python app.py
 ° Visualisation de la structure moléculaire à partir du SMILES avec RDKit
 
 ° Interface responsive avec navigation claire entre la page de recherche et la base de données
+
 ° Filtrage interactif et tri alphabétique (A à Z ou Z à A) dans la base de données.
+
 ° Téléchargement de la base au format CSV pour une analyse externe
 ## Données utilisées
 
