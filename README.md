@@ -11,7 +11,7 @@
 
 **Cloner le dépôt et se placer dans le dossier du projet :**
 ```text
-git clone https://github.com/ton-utilisateur/legal_GUI.git
+git clone https://github.com/Mathildec25/legal_GUI.git
 
 cd legal_GUI
 ```
