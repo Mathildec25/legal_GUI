@@ -1,6 +1,7 @@
 # Safelab_ Interface pour l’analyse juridique des molécules soumises à autorisation spécifique
 
  **Safelab** est une interface interactive qui permet d’afficher les obligations juridiques associées à des substances chimiques réglementées **(stupéfiants, psychotropes, précurseurs)**.
+ 
  L’utilisateur peut :
   - faire une recherche par **nom, numéro CAS ou SMILES**,
   - dessiner une structure moléculaire personnalisée,
@@ -35,11 +36,11 @@ python app.py
 
 ## Fonctionnalités principales
 
-° Recherche de substances par nom, numéro CAS ou SMILES
+- Recherche de substances par nom, numéro CAS ou SMILES
 
-° Dessin de structures moléculaires via un éditeur intégré (Kekule.js), avec génération automatique du SMILES
+- Dessin de structures moléculaires via un éditeur intégré (Kekule.js), avec génération automatique du SMILES
 
-° Affichage des informations juridiques liées à chaque substance :
+- Affichage des informations juridiques liées à chaque substance :
 
    - Classification dans les annexes belges (stupéfiants, psychotropes)
 
@@ -47,13 +48,60 @@ python app.py
 
    - Messages juridiques dynamiques avec liens vers les sources officielles
 
-° Visualisation de la structure moléculaire à partir du SMILES avec RDKit
+- Visualisation de la structure moléculaire à partir du SMILES avec RDKit
 
-° Interface responsive avec navigation claire entre la page de recherche et la base de données
+- Interface responsive avec navigation claire entre la page de recherche et la base de données
 
-° Filtrage interactif et tri alphabétique (A à Z ou Z à A) dans la base de données.
+- Filtrage interactif et tri alphabétique (A à Z ou Z à A) dans la base de données.
 
-° Téléchargement de la base au format CSV pour une analyse externe
+- Téléchargement de la base au format CSV pour une analyse externe
+
+## Guide d’utilisation
+ ### Page de recherche (Search)
+Dès l’ouverture de l’application, vous arrivez sur la page de recherche, qui permet plusieurs actions :
+
+**1. Recherche par nom, numéro CAS ou SMILES**
+   - Utilisez la zone de saisie centrale (champ déroulant) pour taper :
+
+     - le nom de la molécule (ex. : cannabidiol),
+
+     - son numéro CAS (ex. : 13956-29-1),
+
+     - ou sa représentation SMILES.
+
+  - Cliquez sur le bouton  Search pour afficher les informations juridiques et chimiques associées à la substance recherchée.
+
+**2. Dessiner une molécule manuellement (Draw)**
+   - Cliquez sur le bouton Draw pour ouvrir une fenêtre modale (popup).
+
+   - Sur la gauche, un éditeur intégré (Kekule.js) vous permet de dessiner votre molécule à la main.
+
+   - Une fois le dessin terminé, cliquez sur Get SMILES : le SMILES généré sera automatiquement inséré dans la barre en bas.
+
+   - Cliquez ensuite sur Search pour faire apparaître les informations juridiques et celles issues de la base, en bas de la fenêtre (il suffit de scroller).
+
+
+   Vous pouvez également coller directement un SMILES canonique dans la barre, cliquer sur Draw pour voir le dessin à droite, puis cliquer sur Search.
+
+   **Attention : toujours utiliser un SMILES canonique pour garantir l’exactitude de la détection.**
+
+   - Pour fermer la fenêtre de dessin, cliquez sur le bouton Close.
+
+  ### Navigation entre les pages
+Sur la gauche, un menu latéral (sidebar) permet de passer d'une page à l'autre :
+
+  - Search : page par défaut (zone de recherche, éditeur, résultats)
+
+  - Database : visualisation de la base de données complète
+
+
+  ### Page "Database"
+  La page Full Database permet de :
+
+   - voir toutes les substances listées dans la base donnees.csv,
+   - trier les colonnes (de A → Z),
+   - filtrer dynamiquement les résultats,
+   - exporter la base au format CSV via le bouton Export.
 ## Données utilisées
 
 L’application repose sur une **base de données CSV** (`data/donnees.csv`) structurée avec les colonnes suivantes :
@@ -71,28 +119,29 @@ Cette base est automatiquement chargée au démarrage par le fichier `utils/data
 
 ```text
 legal_GUI/
-├── app.py # Point d'entrée principal de l'application Dash
+├── app.py # point d'entrée principal, initialise l’application Dash et enregistre les callbacks.
 ├── environnement.yml # Fichier pour créer l'environnement Conda
 ├── assets/ # Fichiers statiques : CSS, icônes, JS, Kekule
 │   ├── kekule.js_master/ # Code source de Kekule.js (éditeur moléculaire)
 │   ├── kekule_editor.html # Intégration personnalisée de l'éditeur Kekule
-│   ├── clientside.js # Fonctions JavaScript côté client pour Dash ,Permet de récupérer le SMILES dessiné dans l’éditeur Kekule
+│   ├── clientside.js # Fonctions JavaScript côté client pour Dash (récupération du SMILES dessiné dans l’éditeur Kekule)
 │   ├── style.css # Style personnalisé de l'interface
 │   ├── fontawesome.css # Icônes Font Awesome
 │   └── favicon.ico # Icône de l'application
-├── callbacks/ # Fichiers contenant les callbacks Dash
-│   └── substance_callbacks.py # Callbacks pour la recherche et les résultats
+├── callbacks/ # Fichiers contenant les callbacks Dash(Fichiers de gestion des interactions utilisateur)
+│   └── substance_callbacks.py # Callbacks Dash pour la recherche, le dessin, l’affichage des résultats
+
 ├── data/
 │   └── donnees.csv # Base de données des substances
 ├── layout/ # Composants de mise en page de l'interface
-│   ├── main_layout.py # Agencement principal de l'application
+│   ├── main_layout.py # Structure générale (navigation, sidebar, contenu)
 │   ├── search_page.py # Page de recherche de substances
-│   └── databse_page.py # Page d'affichage de la base de données
+│   └── databse_page.py #  Page d’affichage interactif de la base de données
 ├── utils/ # Fonctions utilitaires
-│   ├── data_loader.py # Chargement de la base de données
-│   ├── draw_rdkit.py # Visualisation moléculaire avec RDKit
-│   ├── Narc_psy-procedure.py # Logique juridique : stupéfiants/psychotropes
-│   └── Prec_procedure.py # Logique juridique : précurseurs
+│   ├── data_loader.py # Chargement et nettoyage de la base (normalisation des noms de colonnes)
+│   ├── draw_rdkit.py # Dessin de la molécule à partir d’un SMILES (RDKit)
+│   ├── Narc_psy-procedure.py # Affichage dynamique des obligations pour les stupéfiants / psychotropes
+│   └── Prec_procedure.py # Affichage dynamique des obligations pour les précurseurs
 ```
 
 
