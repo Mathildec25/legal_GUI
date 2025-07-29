@@ -20,6 +20,7 @@ def register_callbacks(app, df):
             (df['name'].str.lower() == search.lower()) |
             (df['cas'].str.lower() == search.lower()) |
             (df['smiles'].str.lower() == search.lower()) |
+            (df['iupac'].str.lower() == search.lower()) |
             (df['smiles_canonique'].str.lower() == search.lower())
         ]
 
