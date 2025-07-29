@@ -21,7 +21,7 @@ def get_search_page(hidden=False):
         # Message d’introduction centré
         html.Div(
             html.H5(
-                "Enter a chemical name or Cas_NO or Smiles to begin",
+                "Enter a name or Cas_Number or Smiles to begin",
                 style={"color": "#003366", "marginBottom": "20px"}
             ),
             style={"marginLeft": "190px"}
