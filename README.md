@@ -19,11 +19,11 @@ cd legal_GUI
 ```text
 conda env create -f environment.yml
 conda activate rdkit-env
-L’environnement utilise conda-forge pour installer RDKit et les autres dépendances.
 ```
+L’environnement utilise conda-forge pour installer RDKit et les autres dépendances.
 **Kekule.js : éditeur de molécules**
 
-Le fichier HTML **assets/kekule_editor.html** contient une version locale du code source de Kekule.js (déjà intégré).
+Le fichier HTML **assets/kekule_editor.html** contient une version locale du code source de Kekule.js ( voir ce lien :https://github.com/partridgejiang/Kekule.js) .
 Aucune installation supplémentaire via npm n’est requise.
 Installation aussi possible manuellement via npm :
 ```text
