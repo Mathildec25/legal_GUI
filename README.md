@@ -1,178 +1,191 @@
-# Safelab_ Interface pour l’analyse juridique des molécules soumises à autorisation spécifique
+# Safelab – Interface for the Legal Analysis of Regulated Chemical Substances
 
- **Safelab** est une interface interactive qui permet d’afficher les obligations juridiques associées à des substances chimiques réglementées **(stupéfiants, psychotropes, précurseurs)**.
+ **Safelab** is an interactive interface designed to display the legal obligations associated with regulated chemical substances **(narcotics, psychotropics, and precursors)**.
  
- L’utilisateur peut :
-  - faire une recherche par **nom, numéro CAS ou SMILES**,
-  - dessiner une structure moléculaire personnalisée,
-  - rechercher automatiquement une substance à partir du SMILES généré par le dessin.
+The user can:
+- search by name, CAS number, or SMILES,
+
+- draw a custom molecular structure,
+
+- automatically search for a substance using the SMILES generated from the drawing.
 
 ## Installation
 
-**Cloner le dépôt et se placer dans le dossier du projet :**
+**Clone the repository and navigate to the project folder :**
 ```text
 git clone https://github.com/Mathildec25/legal_GUI.git
 
 cd legal_GUI
 ```
-**Créer l’environnement Conda à partir du fichier environment.yml :**
+**Create the Conda environment using the environment.yml file :**
 ```text
 conda env create -f environment.yml
 conda activate rdkit-env
 ```
-L’environnement utilise conda-forge pour installer RDKit et les autres dépendances.
-**Kekule.js : éditeur de molécules**
+The environment uses conda-forge to install RDKit and other dependencies.
 
-Le fichier HTML **assets/kekule_editor.html** contient une version locale du code source de Kekule.js ( voir ce lien :https://github.com/partridgejiang/Kekule.js) .
-Aucune installation supplémentaire via npm n’est requise.
-Installation aussi possible manuellement via npm :
+**Kekule.js : Molecular Editor**
+
+The HTML file **assets/kekule_editor.html** includes a local version of the Kekule.js source code
+
+(see: https://github.com/partridgejiang/Kekule.js).
+
+No additional npm installation is required.
+
+Optional manual installation via **npm**:
 ```text
 npm install kekule
 ```
-**Lancer l'application Dash :**
+**Run the Dash application :**
 ```text
 python app.py
 ```
 
-## Fonctionnalités principales
+## Key Features
 
-- Recherche de substances par nom, numéro CAS ou SMILES
+- Search for substances by name, CAS number, or SMILES
 
-- Dessin de structures moléculaires via un éditeur intégré (Kekule.js), avec génération automatique du SMILES
+- Draw molecular structures using an integrated editor (Kekule.js), with automatic SMILES generation
 
-- Affichage des informations juridiques liées à chaque substance :
+- Display legal information associated with each substance:
 
-   - Classification dans les annexes belges (stupéfiants, psychotropes)
+   - Classification under Belgian annexes (narcotics, psychotropics)
 
-   - Catégorie de précurseur (règlements UE 273/2004 et 111/2005)
+   - Precursor category (EU Regulations 273/2004 and 111/2005)
 
-   - Messages juridiques dynamiques avec liens vers les sources officielles
+   - Dynamic legal messages with links to official sources
 
-- Visualisation de la structure moléculaire à partir du SMILES avec RDKit
+- Visualize the molecular structure from SMILES using RDKit
 
-- Interface responsive avec navigation claire entre la page de recherche et la base de données
+- Responsive interface with clear navigation between the search page and the database
 
-- Filtrage interactif et tri alphabétique (A à Z ou Z à A) dans la base de données.
+- Interactive filtering and alphabetical sorting (A to Z or Z to A) in the database
 
-- Téléchargement de la base au format CSV pour une analyse externe
-
-## Guide d’utilisation
- ### Page de recherche (Search)
-Dès l’ouverture de l’application, vous arrivez sur la page de recherche, qui permet plusieurs actions :
-
-**1. Recherche par nom, numéro CAS ou SMILES**
-   - Utilisez la zone de saisie centrale (champ déroulant) pour taper :
-
-     - le nom de la molécule (ex. : cannabidiol),
-
-     - son numéro CAS (ex. : 13956-29-1),
-
-     - ou sa représentation SMILES.
-
-  - Cliquez sur le bouton  Search pour afficher les informations juridiques et chimiques associées à la substance recherchée.
-
-**2. Dessiner une molécule manuellement (Draw)**
-   - Cliquez sur le bouton Draw pour ouvrir une fenêtre modale (popup).
-
-   - Sur la gauche, un éditeur intégré (Kekule.js) vous permet de dessiner votre molécule à la main.
-
-   - Une fois le dessin terminé, cliquez sur Get SMILES : le SMILES généré sera automatiquement inséré dans la barre en bas.
-
-   - Cliquez ensuite sur Search pour faire apparaître les informations juridiques et celles issues de la base, en bas de la fenêtre (il suffit de scroller).
+- Export the database as a CSV file for external analysis
 
 
-   Vous pouvez également coller directement un SMILES canonique dans la barre, cliquer sur Draw pour voir le dessin à droite, puis cliquer sur Search.
+## User Guide
+ ### Search Page
+ When the application opens, the search page appears by default. You can perform several actions:
 
-   **Attention : toujours utiliser un SMILES canonique pour garantir l’exactitude de la détection.**
+ **1. Search by name, CAS number, or SMILES**
 
-   - Pour fermer la fenêtre de dessin, cliquez sur le bouton Close.
+- Use the central input field (dropdown) to type:
 
-  ### Navigation entre les pages
-Sur la gauche, un menu latéral (sidebar) permet de passer d'une page à l'autre :
+  - the molecule’s name (e.g., cannabidiol),
 
-  - Search : page par défaut (zone de recherche, éditeur, résultats)
+  - its CAS number (e.g., 13956-29-1),
 
-  - Database : visualisation de la base de données complète
+  - or its SMILES representation.
 
+- Click the Search button to display the legal and chemical information related to the selected substance.
 
-  ### Page "Database"
-  La page Full Database permet de :
+**2. Draw a molecule manually (Draw)**
 
-   - voir toutes les substances listées dans la base donnees.csv,
-   - trier les colonnes (de A → Z),
-   - filtrer dynamiquement les résultats,
-   - exporter la base au format CSV via le bouton Export.
-## Données utilisées
+- Click the Draw button to open a modal window.
 
-L’application repose sur une **base de données CSV** (`data/donnees.csv`) structurée avec les colonnes suivantes :
+- On the left side, the integrated Kekule.js editor allows you to draw your molecule manually.
 
-- **`name`** : nom de la substance
-- **`cas`** : numéro CAS
-- **`smiles` / `smiles_canonique`** : représentation chimique
-- **`belgian_annex`** : annexe belge applicable (I, II, III, IV)
-- **`EU Annex/Category 273/2004` / `EU Annex/Category 111/2005`** : catégorie de précurseur selon les règlements européens.
+- Once finished, click Get SMILES: the generated SMILES will automatically be inserted into the bottom input field.
+
+- Then click Search to display the legal and database-related information at the bottom of the window (just scroll down).
+
+ You can also paste a canonical SMILES directly into the input bar, click Draw to view the structure on the right, and then click Search.
+
+ **Warning: Always use a canonical SMILES to ensure accurate detection.**
+
+- To close the drawing window, click the Close button.
+
+### Page Navigation
+  A sidebar on the left allows navigation between pages:
+
+ - Search : default page (search input, drawing tool, results)
+
+ - Database : view the complete database
+
+### Database Page
+  The Full Database page allows you to:
+
+  - view all substances listed in donnees.csv,
+
+  - sort columns alphabetically (A → Z),
+
+  - dynamically filter results,
+
+  - export the database as a CSV file via the Export button.
+  ## Data Used
+
+  The application relies on a structured CSV database '(data/donnees.csv)' with the following columns:
+   - **`name`** : substance name
+   - **`cas`** : CAS number
+   - **`smiles` / `smiles_canonique`** : chemical representation
+   - **`belgian_annex`** : relevant Belgian annex (I, II, III, IV)
+   - **`EU Annex/Category 273/2004` / `EU Annex/Category 111/2005`** : precursor category under EU regulations
   
-La base de données utilisée n’est pas encore exhaustive : certains stupéfiants, psychotropes et précurseurs peuvent manquer
-Cette base est automatiquement chargée au démarrage par le fichier `utils/data_loader.py`.
+The database is not yet exhaustive: some narcotics, psychotropics, and precursors may be missing.
+The database is automatically loaded at startup by the utils/data_loader.py script.
 
-## Structure du projet
+## Project Structure
 
 ```text
 legal_GUI/
-├── app.py # point d'entrée principal, initialise l’application Dash et enregistre les callbacks.
-├── environnement.yml # Fichier pour créer l'environnement Conda
-├── assets/ # Fichiers statiques : CSS, icônes, JS, Kekule
-│   ├── kekule.js_master/ # Code source de Kekule.js (éditeur moléculaire)
-│   ├── kekule_editor.html # Intégration personnalisée de l'éditeur Kekule
-│   ├── clientside.js # Fonctions JavaScript côté client pour Dash (récupération du SMILES dessiné dans l’éditeur Kekule)
-│   ├── style.css # Style personnalisé de l'interface
-│   ├── fontawesome.css # Icônes Font Awesome
-│   └── favicon.ico # Icône de l'application
-├── callbacks/ # Fichiers contenant les callbacks Dash(Fichiers de gestion des interactions utilisateur)
-│   └── substance_callbacks.py # Callbacks Dash pour la recherche, le dessin, l’affichage des résultats
-
+├── app.py                      # Main entry point – initializes the Dash app and registers callbacks
+├── environment.yml             # Conda environment file
+├── assets/                     # Static assets: CSS, icons, JS, Kekule
+│   ├── kekule.js_master/       # Kekule.js source code (molecular editor)
+│   ├── kekule_editor.html      # Custom integration of the Kekule editor
+│   ├── clientside.js           # Client-side JS functions for Dash (e.g. retrieve SMILES from Kekule)
+│   ├── style.css               # Custom CSS styles
+│   ├── fontawesome.css         # Font Awesome icons
+│   └── favicon.ico             # App icon
+├── callbacks/                  # Dash callbacks (user interaction logic)
+│   └── substance_callbacks.py  # Callbacks for search, drawing, and result display
 ├── data/
-│   └── donnees.csv # Base de données des substances
-├── layout/ # Composants de mise en page de l'interface
-│   ├── main_layout.py # Structure générale (navigation, sidebar, contenu)
-│   ├── search_page.py # Page de recherche de substances
-│   └── databse_page.py #  Page d’affichage interactif de la base de données
-├── utils/ # Fonctions utilitaires
-│   ├── data_loader.py # Chargement et nettoyage de la base (normalisation des noms de colonnes)
-│   ├── draw_rdkit.py # Dessin de la molécule à partir d’un SMILES (RDKit)
-│   ├── Narc_psy-procedure.py # Affichage dynamique des obligations pour les stupéfiants / psychotropes
-│   └── Prec_procedure.py # Affichage dynamique des obligations pour les précurseurs
+│   └── donnees.csv             # Substances database
+├── layout/                     # Interface layout components
+│   ├── main_layout.py          # Overall structure (navigation, sidebar, content)
+│   ├── search_page.py          # Search page layout
+│   └── database_page.py        # Interactive database display
+├── utils/                      # Utility functions
+│   ├── data_loader.py          # Loads and cleans the database (normalizes column names)
+│   ├── draw_rdkit.py           # Molecule rendering from SMILES using RDKit
+│   ├── Narc_psy_procedure.py   # Legal info for narcotics / psychotropics
+│   └── Prec_procedure.py       # Legal info for precursors
+
 ```
 
 
-## Technologies utilisées
+## Technologies Used
  **VS Code**
- 
-  **Python 3.9**
 
-  **Dash et Dash Bootstrap Components**
+**Python 3.9**
 
-  **RDKit – visualisation moléculaire**
+**Dash and Dash Bootstrap Components**
 
-  **Kekule.js – éditeur moléculaire HTML/JS**
+**RDKit – molecular visualization**
 
-  **Pandas, Plotly, HTML/CSS, Font Awesome**
+**Kekule.js – HTML/JS molecular editor**
 
-## Remarque
-Dans la section**Draw**, il est impératif d’utiliser un **SMILES canonique** pour garantir une détection correcte des substances et un affichage fiable des résultats juridiques.
+**Pandas,HTML/CSS, Font Awesome**
 
-Les conditions de détection et d’affichage dans l’interface dépendent fortement :
+## Notes
+In the **Draw** section, it is crucial to use a **canonical SMILES** to ensure proper detection of substances and accurate display of legal information.
 
-- du **respect exact des noms de colonnes**, y compris les **espaces et majuscules**, dans le fichier CSV  
-  (exemples : `Name`, `belgian_annex`, `EU Annex/Category 273/2004`, `EU Annex/Category 111/2005`, etc.),
-- de la **façon dont les valeurs sont saisies** dans ces colonnes (ex. : `Annexe I`, `1`, `I` peuvent produire des résultats différents).
-  
-De plus,**la détection automatique ne prend pas encore en compte la catégorie 4 des précurseurs ni l’annexe IV de l’arrêté royal belge.**
+Detection and display in the interface are highly dependent on:
 
-Lors du chargement, les noms de colonnes sont automatiquement transformés en minuscules, les espaces sont remplacés par des tirets bas (`_`), et les espaces superflus sont supprimés.
+- **strictly matching column names**, including **spaces and capitalization**, in the CSV file
+(e.g., `Name`, `belgian_annex`, `EU Annex/Category 273/2004`, `EU Annex/Category 111/2005`, etc.),
 
-Il est donc essentiel de **respecter strictement la structure** du fichier `donnees.csv` pour garantir le bon fonctionnement de l’application.
+- **how the values are entered in these columns**(e.g., `Annexe I`, `1`, `I` may yield different results)
 
- En cas de modification de la base de données (ajout de colonnes, changement de nom, nouveaux formats),  
-**le code Python devra être ajusté en conséquence**, notamment les conditions de détection dans les fonctions d’analyse juridique.
+Currently, Category 4 precursors and Annex IV of the Belgian Royal Decree are not yet handled.
+
+At load time, column names are automatically converted to lowercase, spaces are replaced with underscores (`_`), and extra spaces are stripped.
+
+Therefore, it is essential to **strictly follow the structure** of the donnees.csv file to ensure the application functions correctly.
+
+If the database is modified (e.g., columns added, names changed, new formats introduced),
+**the Python code must be updated accordingly**, especially the detection conditions in the legal analysis functions.
+
+
 
