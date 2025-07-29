@@ -48,6 +48,8 @@ python app.py
 ° Visualisation de la structure moléculaire à partir du SMILES avec RDKit
 
 ° Interface responsive avec navigation claire entre la page de recherche et la base de données
+° Filtrage interactif et tri alphabétique (A à Z ou Z à A) dans la base de données.
+° Téléchargement de la base au format CSV pour une analyse externe
 ## Données utilisées
 
 L’application repose sur une **base de données CSV** (`data/donnees.csv`) structurée avec les colonnes suivantes :
