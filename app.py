@@ -1,26 +1,26 @@
 from dash import Dash
 import dash_bootstrap_components as dbc
-# Import du layout principal de l'application
+# Import the main layout of the application
 from layout.main_layout import get_main_layout
-# Import des fonctions de callbacks
+# Import the callback registration functions
 from callbacks.substance_callbacks import register_callbacks
-# Chargement des données à partir du fichier utils
+# Load data from the utils module
 from utils.data_loader import df
 
 app = Dash(
     __name__,
-    title="SafeLab",  # Le titre qui apparaîtra dans l’onglet
-    external_stylesheets=[dbc.themes.FLATLY],# Thème Bootstrap utilisé
-    suppress_callback_exceptions=True # Autorise la gestion de pages dynamiques (multi-pages)
+    title="SafeLab",  # Title that will appear in the browser tab
+    external_stylesheets=[dbc.themes.FLATLY],# Bootstrap theme used
+    suppress_callback_exceptions=True # Allows handling of dynamic (multi-page) content
 )
 
 
 
-# Enregistrement des callbacks
+# Register the callbacks
 register_callbacks(app,df)
 
-# Définition du layout principal (structure visuelle de l'app)
+# Set the main layout (visual structure of the app)
 app.layout = get_main_layout()
-# Lancement de l'application 
+# Launch the application
 if __name__ == "__main__":
     app.run(debug=True)

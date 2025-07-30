@@ -5,20 +5,20 @@ import dash_bootstrap_components as dbc
 from utils.data_loader import df
 import pandas as pd
 
-# Options du Dropdown : tous les identifiants disponibles dans la base
+# Dropdown options: all available identifiers from the database
 options = []
 for col in ['name','iupac' ,'cas', 'smiles', 'smiles_canonique']:
     for val in df[col]:
         if pd.notna(val):
             options.append({"label": val, "value": val})
 
-#  Fonction qui retourne le layout de la page de recherche
+# Function that returns the layout of the search page
 def get_search_page(hidden=False):
     display = "none" if hidden else "block"
 
     return html.Div([
 
-        # Message d’introduction centré
+        # Centered introduction message
         html.Div(
             html.H5(
                 "Enter a name or Cas_Number or Smiles to begin",
@@ -27,11 +27,11 @@ def get_search_page(hidden=False):
             style={"marginLeft": "190px"}
         ),
 
-        # Barre de recherche et bouton "Draw"
+        # Search bar and "Draw" button
         dbc.Row([
             dbc.Col(
                 dbc.Button([
-                    html.I(className="fas fa-pencil-alt", style={"marginRight": "6px"}),  # ✏️ Font Awesome
+                    html.I(className="fas fa-pencil-alt", style={"marginRight": "6px"}),  # Font Awesome
                     "Draw"
                 ],
                 id="draw-button",
@@ -64,20 +64,20 @@ def get_search_page(hidden=False):
         className="align-items-center",
         style={"marginTop": "40px", "marginLeft": "20px", "gap": "5px"}),
 
-        # Détails de la substance sélectionnée
+        # Details of the selected substance
         html.Div(id="substance-details", className="mt-4"),
 
-        # Modal de dessin Kekule + zone SMILES
+        # Kekule drawing modal + SMILES input area
         dbc.Modal([
             dbc.ModalBody([
 
-                # Instruction utilisateur
+                # User instruction
                 html.P([
                     html.I(className="fas fa-vial me-2"),# Font Awesome
                     "You can manually draw your molecule here and Press Get Smiles."
                 ], style={"fontWeight": "bold", "color": "#003366"}),
 
-                # Kekule + Affichage RDKit
+                # Kekule + RDKit display
                 dbc.Row([
                     dbc.Col(
                         html.Iframe(
@@ -105,7 +105,7 @@ def get_search_page(hidden=False):
 
                 html.Br(),
 
-                # Boutons : Get SMILES | Enter | Search | Close
+                # Buttons: Get SMILES | Enter | Search | Close
                 dbc.Row([
                     dbc.Col([
                         dbc.Button([
@@ -154,10 +154,10 @@ def get_search_page(hidden=False):
                     )
                 ]),
 
-                # Stocke les SMILES (bruts) récupérés de Kekule
+                # Stores raw SMILES retrieved from Kekule
                 dcc.Store(id="raw-smiles"),
 
-                # Résultats du bouton "Enter" (affichage dynamique)
+                # Results from the "Enter" button (dynamic display)
                 html.Div(id="modal-search-results", className="mt-4")
             ])
         ],
@@ -169,7 +169,7 @@ def get_search_page(hidden=False):
     ],
     style={
         "display": display,
-        "margin-left": "-70px",   # Décalage global
-        "padding-left": "70px",   # Compensation du décalage
+        "margin-left": "-70px",   # Global offset
+        "padding-left": "70px",   # Offset compensation
         "width": "calc(100% + 20px)"
     })

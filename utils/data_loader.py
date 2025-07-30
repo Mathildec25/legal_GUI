@@ -5,17 +5,17 @@ import pandas as pd
 def load_data(path: str = "C:/Users/user/legal_GUI/data/donnees.csv") -> pd.DataFrame:
 
     """
-    Charge le fichier CSV des substances, nettoie les noms de colonnes.
+    Loads the CSV file of substances and cleans the column names.
 
-    :param path: Chemin vers le fichier CSV
-    :return: DataFrame nettoyé
+    :param path: Path to the CSV file
+    :return: Cleaned DataFrame
     """
     df = pd.read_csv(path, sep=",", encoding="utf-8")
 
-    # Nettoyage des noms de colonnes
+    # Clean column names: lowercase, replace spaces with underscores, strip extra spaces
     df.columns = [col.lower().replace(" ", "_").strip() for col in df.columns]
 
     return df
 
-# Chargement immédiat à l'import
+# Automatically load data on import
 df = load_data()

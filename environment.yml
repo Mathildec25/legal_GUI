@@ -1,8 +1,8 @@
-name: rdkit-env          # Nom de l'environnement Conda
+name: rdkit-env          # Name of the Conda environment
 channels:
-  - conda-forge          # Canal officiel d'Anaconda
-  - defaults             # Canal communautaire avec de nombreuses librairies scientifiques à jour
+  - conda-forge          # Official Anaconda channel
+  - defaults             # Community channel with many up-to-date scientific libraries
 dependencies:
-  - rdkit                # Paquet principal 
-  - python=3.9           # Version de Python utilisée
+  - rdkit                # Main package
+  - python=3.9           # Python version used
 

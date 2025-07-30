@@ -2,26 +2,26 @@ from dash import html
 
 def get_legal_procedure(reg):
     """
-    Génère les blocs d'information juridique (Dash HTML) en fonction
-    des régulations européennes (273/2004, 111/2005) et belges (annexes).
+    Generates legal information blocks (Dash HTML) based on
+    European regulations (273/2004, 111/2005) and Belgian annexes.
 
-    Paramètre :
-    - reg (dict) : dictionnaire contenant les informations de régulation pour une substance.
+    Parameter:
+    - reg (dict): dictionary containing regulatory information for a substance.
 
-    Retour :
-    - html.Div : ensemble de blocs HTML décrivant les obligations légales.
+    Returns:
+    - html.Div: a set of HTML blocks describing the legal obligations.
     """
 
-    # Récupération et normalisation des catégories d'annexes
+    # Retrieve and normalize annex categories
     cat_273       = str(reg.get('eu_annex/category_273/2004', '')).strip().lower()
     cat_111       = str(reg.get('eu_annex/category_111/2005', '')).strip().lower()
-    belgian_annex = str(reg.get('belgian_annex', '')).strip().lower() # retourne nan
+    belgian_annex = str(reg.get('belgian_annex', '')).strip().lower() # returns nan
 
     blocks = []
 
-    #  Fonction utilitaire pour créer des éléments <li> avec icône
-    # Les icônes sont fournies par Font Awesome via la classe CSS "fas fa-..."
-    # Exemple : fa-user-check, fa-database, etc.
+    # Utility function to create <li> elements with an icon
+    # Icons are provided by Font Awesome via the "fas fa-..." class
+    # Example: fa-user-check, fa-database, etc.
     def li(icon, text):
         return html.Li([
             html.I(className=f"fas {icon} me-2 text-primary"),
@@ -153,7 +153,7 @@ def get_legal_procedure(reg):
         ], style={"marginBottom": "20px"}))
 
 
-    # Aucune régulation détectée
+    #  No regulation detected
     # ===============================
 
     if not blocks:
@@ -168,7 +168,7 @@ def get_legal_procedure(reg):
             ])
         ])
 
-    # Liens utiles (affichés dans tous les cas)
+    # Useful links (displayed in all cases)
     # ===============================
 
     shared_links = html.Div([

@@ -1,16 +1,16 @@
 /*
  * === Font Awesome CSS Import ===
  *
- * Ce fichier importe la bibliothèque d'icônes Font Awesome via un CDN.
- * Font Awesome fournit des icônes vectorielles utilisées dans l'application Dash
- * pour améliorer l'interface utilisateur (UI) :
- * - Loupe :       <i class="fas fa-search"></i>
- * - Crayon :      <i class="fas fa-edit"></i>
- * - Base de données : <i class="fas fa-database"></i>
- * - Gavel (marteau juridique) : <i class="fas fa-gavel"></i>
- * Pour l'utiliser, html.I(className="fas fa-nom-de-l-icone")
- * Pour que cela fonctionne, ce fichier doit être placé dans le dossier /assets de Dash.
- * Dash chargera automatiquement tous les fichiers CSS du dossier /assets.
+ * This file imports the Font Awesome icon library via a CDN.
+ * Font Awesome provides vector icons used in the Dash application
+ * to enhance the user interface (UI):
+ * - Magnifying glass:    <i class="fas fa-search"></i>
+ * - Pencil:              <i class="fas fa-edit"></i>
+ * - Database:            <i class="fas fa-database"></i>
+ * - Gavel (legal symbol): <i class="fas fa-gavel"></i>
+ * To use it: html.I(className="fas fa-icon-name")
+ * To make it work, this file must be placed in Dash's /assets folder.
+ * Dash automatically loads all CSS files from the /assets directory.
  */
 
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');

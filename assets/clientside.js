@@ -1,22 +1,22 @@
-// Étend l'objet global window.dash_clientside avec une nouvelle fonction personnalisée
+// Extend the global window.dash_clientside object with a custom function
 window.dash_clientside = Object.assign({}, window.dash_clientside, {
     clientside: {
-        // Fonction appelée lors d’un clic sur le bouton "Get SMILES"
+        // Function triggered when the "Get SMILES" button is clicked
         getKekuleSmiles: function(n_clicks) {
-            // Si le bouton n'a pas encore été cliqué, on ne fait rien (Dash conserve l’état actuel)
+            // If the button hasn't been clicked yet, do nothing (Dash keeps current state)
             if (!n_clicks) return window.dash_clientside.no_update;
 
-            // Récupère l'iframe contenant l'éditeur Kekule
+            // Get the iframe containing the Kekule editor
             const iframe = document.getElementById("kekule-editor");
 
-            // Vérifie que l'iframe et la fonction getSmiles sont accessibles
+            // Check if the iframe and the getSmiles function are accessible
             if (iframe && iframe.contentWindow && typeof iframe.contentWindow.getSmiles === "function") {
-                // Appelle la fonction getSmiles définie dans le fichier HTML de l’éditeur
+                // Call the getSmiles function defined in the editor’s HTML file
                 const smiles = iframe.contentWindow.getSmiles();
                 return smiles;
             }
 
-            // Si quelque chose ne va pas, on retourne une chaîne vide
+            // If something goes wrong, return an empty string
             return '';
         }
     }

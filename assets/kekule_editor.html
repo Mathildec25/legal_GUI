@@ -1,20 +1,20 @@
 <!--
-  Fichier : kekule-editor.html
+  File: kekule-editor.html
 
-   À propos :
-  Ce fichier sert à afficher un éditeur de structure moléculaire avec Kekule.js
-  dans une iframe intégrée à une application Dash.
+  About:
+  This file is used to display a molecular structure editor using Kekule.js
+  inside an iframe integrated into a Dash application.
 
-   Installation :
-  Kekule.js peut normalement être installé via NPM :
+  Installation:
+  Kekule.js is normally installable via NPM:
      npm install kekule
 
-   Mais ici, on utilise une version **locale du code source**, téléchargée depuis GitHub :
-    https://github.com/partridgejiang/Kekule.js
-  Les fichiers JS et CSS ont été extraits manuellement et placés dans le dossier :
-    Kekule.js-master/Kekule.js-master/dist/
+  But here, we use a **local version of the source code**, downloaded from GitHub:
+     https://github.com/partridgejiang/Kekule.js
+  The JS and CSS files were manually extracted and placed in the folder:
+     Kekule.js-master/Kekule.js-master/dist/
 
-  Avantage : aucune dépendance externe, tout est géré localement.
+  Advantage: no external dependencies, everything is handled locally.
 -->
 
 <!DOCTYPE html>
@@ -23,24 +23,24 @@
   <meta charset="UTF-8">
   <title>Structure Editor</title>
 
-  <!-- Import de Kekule.js en local -->
+  <!-- Import Kekule.js locally -->
   <script src="Kekule.js-master/Kekule.js-master/dist/kekule.js"></script>
   <link rel="stylesheet" href="Kekule.js-master/Kekule.js-master/dist/themes/default/kekule.css">
 </head>
 
 <body>
-  <!-- Zone où s’affiche l’éditeur Kekule -->
+  <!-- Area where the Kekule editor will be displayed -->
   <div id="editor" style="width:100%; height:500px;"></div>
 
   <script>
-    //  Initialisation de l’éditeur Kekule dans la div "editor"
+    //  Initialize the Kekule editor inside the "editor" div
     const editor = new Kekule.Editor.Composer(document.getElementById('editor'));
 
-    // Fonction appelée par Dash via l’iframe pour récupérer le SMILES
+    // Function called by Dash via iframe to retrieve the SMILES
     window.getSmiles = function() {
-      const mol = editor.getChemObj();  // Récupère l’objet chimique dessiné
-      const smiles = Kekule.IO.saveFormatData(mol, 'smi');  // Convertit en SMILES
-      console.log("SMILES:", smiles);  // Pour debug dans la console
+      const mol = editor.getChemObj();  // Get the drawn chemical object
+      const smiles = Kekule.IO.saveFormatData(mol, 'smi');  // Convert to SMILES
+      console.log("SMILES:", smiles);  // For debugging in console
       return smiles;
     };
   </script>

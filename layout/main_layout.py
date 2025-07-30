@@ -2,32 +2,31 @@ from dash import dcc, html
 import dash_bootstrap_components as dbc
 from layout.search_page import get_search_page
 
-# Fonction principale du layout
+# Main layout function
 # ===========================
-# Cette fonction retourne la structure complète de l'application Dash
-# avec une sidebar à gauche et un contenu dynamique à droite.
-
+# This function returns the full structure of the Dash application
+# with a sidebar on the left and dynamic content on the right.
 def get_main_layout():
 
     #
-    #  Sidebar avec navigation
+    #  Sidebar with navigation
     # ===========================
 
     sidebar = html.Div([
-        # Logo de l'application (icône)
+        # Application logo (icon)
         html.Div(
             html.Img(src="assets/favicon.ico", className="logo-img"),
             className="logo-container"
         ),
 
-        # Titre de l'application
+        # Application title
         html.Div("SafeLab", className="logo-text"),
 
-        html.Hr(),  # Séparation visuelle
+        html.Hr(),  # Visual separator
 
-        #  Navigation verticale (Font Awesome + texte)
+        #  Vertical navigation (Font Awesome icons + text)
         dbc.Nav([
-            # Lien vers la page de recherche
+            # Link to the search page
             dbc.NavLink([
                 html.I(className="fas fa-search nav-icon"),
                 html.Span("Search", className="nav-text")
@@ -36,7 +35,7 @@ def get_main_layout():
             active="exact",
             className="navlink"),
 
-            # Lien vers la base de données
+            # Link to the database page
             dbc.NavLink([
                 html.I(className="fas fa-database", style={"marginRight": "10px"}),
                 html.Span("Database", className="nav-text")
@@ -50,18 +49,18 @@ def get_main_layout():
     ],
     className="sidebar sidebar-open")
 
-    # Structure de page principale (2 colonnes : sidebar + contenu)
+    # Main page structure (2 columns: sidebar + content)
     # ===========================
 
     return dbc.Row([
-        # Colonne gauche : sidebar (2/12)
+        # Left column: sidebar (2/12)
         dbc.Col(sidebar, width=2),
 
-        # Colonne droite : contenu dynamique (10/12)
+        # Right column: dynamic content (10/12)
         dbc.Col([
-            dcc.Location(id="url", refresh=False),              # Gère l'URL pour la navigation
-            get_search_page(hidden=True),                       # Charge la page Search mais masquée par défaut
-            html.Div(id="page-content")                         # Affiche dynamiquement le contenu selon l'URL
+            dcc.Location(id="url", refresh=False),              # Handles the URL for navigation
+            get_search_page(hidden=True),                       # Loads the Search page, hidden by default
+            html.Div(id="page-content")                         # Displays the content dynamically based on URL
         ], width=10)
     ],
-    className="g-0")  # "g-0" supprime l'espacement horizontal entre les colonnes Bootstrap
+    className="g-0") # "g-0" removes horizontal spacing between Bootstrap columns

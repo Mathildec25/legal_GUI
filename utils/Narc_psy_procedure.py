@@ -2,25 +2,24 @@ from dash import html
 
 def get_stup_psy_procedure(reg):
     """
-    Retourne la procédure juridique applicable pour les stupéfiants/psychotropes,
-    avec icônes (via Font Awesome), liens officiels AFMPS et règles de stockage,
-    en fonction de l'annexe belge (Annexe I, II, III...).
+    Returns the legal procedure applicable to narcotic/psychotropic substances,
+    including icons (via Font Awesome), official AFMPS links, and storage rules,
+    based on the Belgian annex (Annex I, II, III...).
 
-    Paramètre :
-    - reg (dict) : dictionnaire contenant l'attribut 'belgian_annex'.
+    Parameter:
+    - reg (dict): dictionary containing the 'belgian_annex' attribute.
 
-    Retour :
-    - html.Div : bloc HTML Dash décrivant les obligations juridiques applicables.
+    Returns:
+    - html.Div: Dash HTML block describing the applicable legal obligations.
     """
-
-    # Récupération et normalisation de l’annexe belge
+    # Retrieve and normalize the Belgian annex
     annex = str(reg.get("belgian_annex", "")).strip().lower()
 
-    # Si aucune annexe n'est renseignée, on ne retourne rien
+    # If no annex is specified, return nothing
     if annex in ["", "nan", "none", "null"]:
         return ""
 
-    # Normalisation : garde les deux premiers mots de l’annexe
+    # Normalization: keep only the first two words of the annex
     normalized = annex.split()[0:2]
     joined = " ".join(normalized)
 
@@ -48,7 +47,7 @@ def get_stup_psy_procedure(reg):
                 "The activity license is valid for 3 years from the date of issuance and can be renewed up to 3 months before expiration."
             ]),
 
-            # Liens d'autorisation (activités / utilisateur final)
+            # Authorization links (activity / end-user)
             html.Ul([
                 html.Li([
                     html.I(className="fas fa-file-signature me-2 text-primary"),
@@ -60,7 +59,7 @@ def get_stup_psy_procedure(reg):
                 ])
             ]),
 
-            #  Enregistrement obligatoire dans Narcoreg
+            # Mandatory registration in Narcoreg
             html.P([
                 html.I(className="fas fa-database me-2 text-success"),
                 "All transactions involving narcotics or psychotropic substances listed in Annexes I, II and IV (except Ic and IVc preparations) of the Royal Decree of 6 September 2017 must be recorded in the AFMPS online system: "
@@ -129,7 +128,7 @@ def get_stup_psy_procedure(reg):
                 "Storage: Must be kept in a suitably arranged space offering protection against breakage or theft (Article 40, §2 of the Royal Decree 2017)."
             ])
         ])
-    #  Cas non pris en charge
+    #  Unsupported case
     # ============================
     else:
         return html.Div([

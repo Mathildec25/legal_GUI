@@ -1,11 +1,11 @@
 from dash import html, dash_table
 from utils.data_loader import df
 
-# Fonction qui génère la page "Database"
+# Function that generates the "Database" page
 def get_database_page():
     return html.Div([
 
-        # Titre de la page
+        # Page title
         html.H2("Full Database", style={
             "marginTop": "20px",
             "marginBottom": "20px",
@@ -17,28 +17,28 @@ def get_database_page():
             "fontFamily": "Arial, sans-serif"
         }),
 
-        # Table de données interactive
+        # Interactive data table
         html.Div([
             dash_table.DataTable(
                 id="database-table",
                 columns=[{"name": col, "id": col} for col in df.columns],
                 data=df.to_dict("records"),
 
-                # Table non modifiable par l'utilisateur
+                # Table is not editable by the user
                 editable=False,
 
-                # Filtres et tri natifs intégrés
+                # Native filtering and sorting
                 filter_action="native",
                 sort_action="native",
 
-                #  Pagination désactivée pour scroll fluide
+                # Pagination disabled for smooth scrolling
                 page_action="none",
-                fixed_rows={"headers": True},  # Header fixe au scroll
+                fixed_rows={"headers": True},  # Sticky header on scroll
 
-                # Style global du conteneur de la table
+                # Global style of the table container
                 style_table={
-                    "width": "calc(100% - 80px)",       # Ajusté pour ne pas déborder de la sidebar
-                    "height": "calc(100vh - 160px)",    # Pleine hauteur visible
+                    "width": "calc(100% - 80px)",       # Adjusted to fit next to the sidebar
+                    "height": "calc(100vh - 160px)",    # Full visible height
                     "overflowX": "auto",
                     "overflowY": "auto",
                     "marginLeft": "0px",
@@ -47,7 +47,7 @@ def get_database_page():
                     "boxShadow": "0 1px 3px rgba(0, 0, 0, 0.1)"
                 },
 
-                # Style des cellules (contenu)
+                # Style for all cells
                 style_cell={
                     "textAlign": "left",
                     "padding": "10px 14px",
@@ -61,7 +61,7 @@ def get_database_page():
                     "fontSize": "14px"
                 },
 
-                # Style de l’en-tête (sticky + jaune)
+                # Header style (sticky + yellow)
                 style_header={
                     "backgroundColor": "#ffcb47",
                     "color": "black",
@@ -72,13 +72,13 @@ def get_database_page():
                     "border": "1px solid #ddd"
                 },
 
-                # Style des données
+                # Data style
                 style_data={
                     "backgroundColor": "white",
                     "color": "black"
                 },
 
-                # Mise en valeur : lignes impaires, ligne active
+                # Highlighting: odd rows and active row
                 style_data_conditional=[
                     {
                         "if": {"row_index": "odd"},
@@ -91,7 +91,7 @@ def get_database_page():
                     }
                 ],
 
-                # Performances + export CSV
+                # Performance + CSV export
                 virtualization=True,
                 export_format="csv"
             )
