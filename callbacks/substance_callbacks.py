@@ -21,7 +21,7 @@ def register_callbacks(app, df):
             (df['cas'].str.lower() == search.lower()) |
             (df['smiles'].str.lower() == search.lower()) |
             (df['iupac'].str.lower() == search.lower()) |
-            (df['smiles_canonique'].str.lower() == search.lower())
+            (df['canonical_smiles'].str.lower() == search.lower())
         ]
 
         if match.empty:

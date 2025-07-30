@@ -69,7 +69,7 @@ def get_stup_psy_procedure(reg):
 
     #  Belgian Annex II
     # ============================
-    elif joined in ["annex ii", "annex iia", "annex iib"]:
+    elif joined in ["annex ii", "annex iia", "annex iib","annex iic"]:
         return html.Div([
             html.H5([
                 html.I(className="fas fa-gavel me-2 text-warning"),

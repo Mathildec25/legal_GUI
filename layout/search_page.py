@@ -7,7 +7,7 @@ import pandas as pd
 
 # Dropdown options: all available identifiers from the database
 options = []
-for col in ['name','iupac' ,'cas', 'smiles', 'smiles_canonique']:
+for col in ['name','iupac' ,'cas', 'smiles', 'canonical_smiles']:
     for val in df[col]:
         if pd.notna(val):
             options.append({"label": val, "value": val})
