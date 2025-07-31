@@ -1,0 +1,48 @@
+<!--
+  File: kekule-editor.html
+
+  About:
+  This file is used to display a molecular structure editor using Kekule.js
+  inside an iframe integrated into a Dash application.
+
+  Installation:
+  Kekule.js is normally installable via NPM:
+     npm install kekule
+
+  But here, we use a **local version of the source code**, downloaded from GitHub:
+     https://github.com/partridgejiang/Kekule.js
+  The JS and CSS files were manually extracted and placed in the folder:
+     Kekule.js-master/Kekule.js-master/dist/
+
+  Advantage: no external dependencies, everything is handled locally.
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Structure Editor</title>
+
+  <!-- Import Kekule.js locally -->
+  <script src="Kekule.js-master/Kekule.js-master/dist/kekule.js"></script>
+  <link rel="stylesheet" href="Kekule.js-master/Kekule.js-master/dist/themes/default/kekule.css">
+</head>
+
+<body>
+  <!-- Area where the Kekule editor will be displayed -->
+  <div id="editor" style="width:100%; height:500px;"></div>
+
+  <script>
+    //  Initialize the Kekule editor inside the "editor" div
+    const editor = new Kekule.Editor.Composer(document.getElementById('editor'));
+
+    // Function called by Dash via iframe to retrieve the SMILES
+    window.getSmiles = function() {
+      const mol = editor.getChemObj();  // Get the drawn chemical object
+      const smiles = Kekule.IO.saveFormatData(mol, 'smi');  // Convert to SMILES
+      console.log("SMILES:", smiles);  // For debugging in console
+      return smiles;
+    };
+  </script>
+</body>
+</html>

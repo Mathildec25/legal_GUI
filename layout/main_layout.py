@@ -1,54 +1,69 @@
 
 from dash import dcc, html
 import dash_bootstrap_components as dbc
+from layout.search_page import get_search_page
 
+# Main layout function
+# ===========================
+# This function returns the full structure of the Dash application
+# with a sidebar on the left and dynamic content on the right.
 def get_main_layout():
-    search_bar = dbc.Row([
-        dbc.Col(
-            dbc.Button("Draw", color="success", className="ms-2", id="draw-button"),
-            width="auto",
-            style={"marginTop": "35px", "marginLeft": "30px"}
-        ),
-        dbc.Col(
-            dcc.Input(
-                id="input-substance",
-                type="text",
-                placeholder="Enter substance name...",
-                debounce=True,
-                className="form-control"
-            ),
-            style={"marginTop": "35px", "marginLeft": "10px", "width": "90px"}
-        ),
-        dbc.Col(
-            dbc.Button("Search", color="success", className="ms-2", id="search-button", n_clicks=0),
-            width="auto",
-            style={"marginTop": "35px", "marginLeft": "30px"}
-        )
-    ], className="g-0 flex-nowrap mt-3 mt-md-0", align="center")
 
-    sidebar = dbc.Nav([
-        dbc.NavItem(dbc.NavLink("Menu", disabled=True, style={"color": "white", "fontSize": "36px"})),
-        dbc.NavItem(dbc.NavLink("DataBase", href="#", active=True, style={"color": "white", "backgroundColor": "#1E5631"})),
-        dbc.NavItem(dbc.NavLink("Help", href="#", active=True, style={"color": "white", "backgroundColor": "#1E5631"}))
-    ], vertical=True, pills=True, className="sidebar")
 
-    draw_modal = dbc.Modal([
-        dbc.ModalHeader(dbc.ModalTitle("Draw Structure")),
-        dbc.ModalBody(
-            WebView(src="/assets/ketcher_embed.html", id="ketcher-frame", style={"height": "500px", "width": "100%"})
+    #
+    #  Sidebar with navigation
+    # ===========================
+
+    sidebar = html.Div([
+        # Application logo (icon)
+        html.Div(
+            html.Img(src="assets/favicon.ico", className="logo-img"),
+            className="logo-container"
         ),
-        dbc.ModalFooter([
-            dbc.Button("Use structure", id="confirm-draw", color="primary", className="me-2"),
-            dbc.Button("Close", id="close-draw", className="ms-auto", n_clicks=0, color="secondary")
-        ])
-    ], id="modal-draw", is_open=False, size="xl")
+
+        # Application title
+        html.Div("SafeLab", className="logo-text"),
+
+        html.Hr(),  # Visual separator
+
+        #  Vertical navigation (Font Awesome icons + text)
+        dbc.Nav([
+            # Link to the search page
+            dbc.NavLink([
+                html.I(className="fas fa-search nav-icon"),
+                html.Span("Search", className="nav-text")
+            ],
+            href="/search",
+            active="exact",
+            className="navlink"),
+
+            # Link to the database page
+            dbc.NavLink([
+                html.I(className="fas fa-database", style={"marginRight": "10px"}),
+                html.Span("Database", className="nav-text")
+            ],
+            href="/database",
+            active="exact",
+            className="navlink")
+        ],
+        vertical=True,
+        pills=True)
+    ],
+    className="sidebar sidebar-open")
+
+    # Main page structure (2 columns: sidebar + content)
+    # ===========================
+
 
     return dbc.Row([
+        # Left column: sidebar (2/12)
         dbc.Col(sidebar, width=2),
+
+        # Right column: dynamic content (10/12)
         dbc.Col([
-            search_bar,
-            html.Div(id="substance-details", className="mt-4"),
-            draw_modal,
-            dcc.Store(id="store-drawn-smiles")
+            dcc.Location(id="url", refresh=False),              # Handles the URL for navigation
+            get_search_page(hidden=True),                       # Loads the Search page, hidden by default
+            html.Div(id="page-content")                         # Displays the content dynamically based on URL
         ], width=10)
-    ])
+    ],
+    className="g-0") # "g-0" removes horizontal spacing between Bootstrap columns
