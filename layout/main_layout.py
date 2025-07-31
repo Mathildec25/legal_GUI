@@ -1,3 +1,4 @@
+
 from dash import dcc, html
 import dash_bootstrap_components as dbc
 from layout.search_page import get_search_page
@@ -7,6 +8,7 @@ from layout.search_page import get_search_page
 # This function returns the full structure of the Dash application
 # with a sidebar on the left and dynamic content on the right.
 def get_main_layout():
+
 
     #
     #  Sidebar with navigation
@@ -51,6 +53,7 @@ def get_main_layout():
 
     # Main page structure (2 columns: sidebar + content)
     # ===========================
+
 
     return dbc.Row([
         # Left column: sidebar (2/12)
