@@ -1,8 +1,22 @@
-name: rdkit-env          # Name of the Conda environment
+name: legal-gui
 channels:
-  - conda-forge          # Official Anaconda channel
-  - defaults             # Community channel with many up-to-date scientific libraries
+  - conda-forge
 dependencies:
-  - rdkit                # Main package
-  - python=3.9           # Python version used
+  # Python version
+  - python=3.10
 
+  # RDKit (chemoinformatics)
+  - rdkit=2023.09.3
+
+  # Dash et extensions
+  - pip
+  - pip:
+      - dash>=2.16.1
+      - dash-bootstrap-components>=1.6.0
+
+  # Utilitaires
+  - pandas
+  - numpy
+  - diskcache         # pour callbacks longs ou caching disque
+  - flask
+  - plotly
