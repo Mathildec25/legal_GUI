@@ -1,175 +1,233 @@
-# search_page.py
-
 from dash import html, dcc
 import dash_bootstrap_components as dbc
 from utils.data_loader import df
 import pandas as pd
 
-# Dropdown options: all available identifiers from the database
+def _pick_col(df, candidates):
+    for c in candidates:
+        if c in df.columns:
+            return c
+    return None
+
+# Définis des alias possibles pour chaque champ
+FIELD_CANDIDATES = {
+    "NAME": ["NAME", "Name", "Substance", "Substance Name", "nom"],
+    "IUPAC": ["IUPAC", "IUPAC Name", "Nom IUPAC"],
+    "CAS": ["CAS", "CAS Number", "CAS_No", "CAS number"],
+    "SMILES": ["SMILES", "Smiles"],
+    "canonical_smiles": ["canonical_smiles", "Canonical_Smiles", "Canonical SMILES"],
+}
+
 options = []
-for col in ['name','iupac' ,'cas', 'smiles', 'canonical_smiles']:
+for target, candidates in FIELD_CANDIDATES.items():
+    col = _pick_col(df, candidates)
+    if col is None:
+        continue
     for val in df[col]:
         if pd.notna(val):
             options.append({"label": val, "value": val})
 
-# Function that returns the layout of the search page
 def get_search_page(hidden=False):
+    """
+    Page de recherche repensée avec design moderne
+    """
     display = "none" if hidden else "block"
-
+    
     return html.Div([
-
-        # Centered introduction message
-        html.Div(
-            html.H5(
-                "Enter a name or Cas_Number or Smiles to begin",
-                style={"color": "#003366", "marginBottom": "20px"}
-            ),
-            style={"marginLeft": "190px"}
-        ),
-
-        # Search bar and "Draw" button
-        dbc.Row([
-            dbc.Col(
-                dbc.Button([
-                    html.I(className="fas fa-pencil-alt", style={"marginRight": "6px"}),  # Font Awesome
-                    "Draw"
-                ],
-                id="draw-button",
-                n_clicks=0,
-                style={"background-color": "#066ab1", "color": "white"}),
-                width="auto"
-            ),
-
-            dbc.Col(
-                dcc.Dropdown(
-                    id='input-substance',
-                    options=options,
-                    placeholder="Search by name, CAS number, or SMILES...",
-                    searchable=True
-                ),
-                width=8
-            ),
-
-            dbc.Col(
-                dbc.Button([
-                    html.I(className="fas fa-search", style={"marginRight": "6px"}),  # Font Awesome
-                    "Search"
-                ],
-                id="search-button",
-                n_clicks=0,
-                style={"background-color": "#066ab1", "color": "white"}),
-                width="auto"
-            )
-        ],
-        className="align-items-center",
-        style={"marginTop": "40px", "marginLeft": "20px", "gap": "5px"}),
-
-        # Details of the selected substance
-        html.Div(id="substance-details", className="mt-4"),
-
-        # Kekule drawing modal + SMILES input area
-        dbc.Modal([
-            dbc.ModalBody([
-
-                # User instruction
-                html.P([
-                    html.I(className="fas fa-vial me-2"),# Font Awesome
-                    "You can manually draw your molecule here and Press Get Smiles."
-                ], style={"fontWeight": "bold", "color": "#003366"}),
-
-                # Kekule + RDKit display
-                dbc.Row([
-                    dbc.Col(
-                        html.Iframe(
-                            src="/assets/kekule_editor.html",
-                            style={"width": "100%", "height": "500px", "border": "none"},
-                            id="kekule-editor"
+        
+        # Section de recherche principale avec card moderne
+        html.Section([
+            dbc.Container([
+                dbc.Card([
+                    dbc.CardBody([
+                        # Titre de section
+                        html.H2([
+                            html.I(className="fas fa-search me-2 text-primary"),
+                            "Molecular Search"
+                        ], className="search-section-title"),
+                        
+                        html.P(
+                            "Choose your preferred search method and find detailed regulatory information",
+                            className="search-section-subtitle"
                         ),
-                        width=6
-                    ),
-                    dbc.Col(
-                        html.Div(id="display-rdkit-svg", style={"height": "500px"}),
-                        width=6
-                    )
-                ]),
-
-                html.Br(),
-
-                # Input SMILES manuel
-                dcc.Input(
-                    id="manual-smiles",
-                    placeholder="Paste canonical SMILES here Press Draw and Search to get legal information .",
-                    type="text",
-                    style={"width": "100%"}
-                ),
-
-                html.Br(),
-
-                # Buttons: Get SMILES | Enter | Search | Close
+                        
+                        # Méthodes de recherche
+                        dbc.Row([
+                            dbc.Col([
+                                dbc.Card([
+                                    dbc.CardBody([
+                                        html.I(className="fas fa-search search-method-icon"),
+                                        html.H5("Text Search", className="mt-2"),
+                                        html.P("Search by name, CAS number, or SMILES notation", 
+                                              className="text-muted small")
+                                    ], className="text-center search-method-card active")
+                                ], className="search-method", id="method-text")
+                            ], md=4),
+                            
+                            dbc.Col([
+                                dbc.Card([
+                                    dbc.CardBody([
+                                        html.I(className="fas fa-pencil-alt search-method-icon"),
+                                        html.H5("Draw Molecule", className="mt-2"),
+                                        html.P("Draw your molecule structure interactively", 
+                                              className="text-muted small")
+                                    ], className="text-center search-method-card")
+                                ], className="search-method", id="method-draw")
+                            ], md=4),
+                            
+                            dbc.Col([
+                                dbc.Card([
+                                    dbc.CardBody([
+                                        html.I(className="fas fa-upload search-method-icon"),
+                                        html.H5("Upload File", className="mt-2"),
+                                        html.P("Import from MOL, SDF or other formats", 
+                                              className="text-muted small")
+                                    ], className="text-center search-method-card")
+                                ], className="search-method", id="method-upload")
+                            ], md=4)
+                        ], className="mb-4 search-methods-row"),
+                        
+                        # Barre de recherche moderne
+                        html.Div([
+                            dbc.InputGroup([
+                                dcc.Dropdown(
+                                    id='input-substance',
+                                    options=options,
+                                    placeholder="Enter molecule name, CAS number, or SMILES...",
+                                    searchable=True,
+                                    className="modern-search-dropdown"
+                                ),
+                                dbc.Button([
+                                    html.I(className="fas fa-search me-2"),
+                                    html.Span("Search", className="d-none d-md-inline")
+                                ],
+                                id="search-button",
+                                color="primary",
+                                className="search-btn-modern")
+                            ], className="search-input-group")
+                        ], className="search-input-container")
+                        
+                    ])
+                ], className="search-main-card shadow-lg")
+            ], className="search-container")
+        ], className="search-section-wrapper"),
+        
+        # Résultats de recherche
+        html.Section([
+            dbc.Container([
+                html.Div(id="substance-details", className="results-container")
+            ])
+        ], className="results-section"),
+        
+        # Modal modernisé pour le dessin
+        dbc.Modal([
+            dbc.ModalHeader([
+                html.H4([
+                    html.I(className="fas fa-pencil-alt me-2"),
+                    "Molecular Editor"
+                ], className="modal-title-modern")
+            ]),
+            dbc.ModalBody([
+                # Instructions utilisateur
+                dbc.Alert([
+                    html.I(className="fas fa-info-circle me-2"),
+                    "Draw your molecule using the interactive editor below, then click 'Get SMILES' to extract the structure."
+                ], color="info", className="mb-3"),
+                
+                # Interface de dessin
                 dbc.Row([
                     dbc.Col([
+                        html.H6([
+                            html.I(className="fas fa-pen me-2"),
+                            "Draw Molecule"
+                        ], className="mb-3"),
+                        html.Iframe(
+                            src="/assets/kekule_editor.html",
+                            className="kekule-editor-modern",
+                            id="kekule-editor"
+                        )
+                    ], md=6),
+                    
+                    dbc.Col([
+                        html.H6([
+                            html.I(className="fas fa-eye me-2"),
+                            "Preview & Visualization"
+                        ], className="mb-3"),
+                        html.Div(
+                            id="display-rdkit-svg",
+                            className="rdkit-display-modern"
+                        )
+                    ], md=6)
+                ], className="drawing-interface-row"),
+                
+                # Input SMILES
+                html.Div([
+                    html.Label("Generated SMILES:", className="form-label fw-bold"),
+                    dbc.InputGroup([
+                        dbc.Input(
+                            id="manual-smiles",
+                            placeholder="SMILES will appear here after drawing...",
+                            className="smiles-input-modern"
+                        ),
                         dbc.Button([
-                            html.I(className="fas fa-flask me-2"),# Font Awesome
+                            html.I(className="fas fa-copy me-1"),
+                            "Copy"
+                        ], color="outline-secondary", id="copy-smiles")
+                    ])
+                ], className="mt-3 smiles-input-section"),
+                
+                # Boutons d'action
+                html.Div([
+                    dbc.ButtonGroup([
+                        dbc.Button([
+                            html.I(className="fas fa-flask me-2"),
                             "Get SMILES"
                         ],
                         id="get-smiles-btn",
-                        n_clicks=0,
-                        className="mt-2 me-2",
-                        style={"background-color": "#066ab1"},
-                        size="sm"),
-
+                        color="info",
+                        className="action-btn"),
+                        
                         dbc.Button([
-                            html.I(className="fas fa-play me-2"),# Font Awesome
-                            "draw"
+                            html.I(className="fas fa-play me-2"),
+                            "Preview"
                         ],
                         id="load-smiles",
-                        n_clicks=0,
-                        className="mt-2 me-2",
-                        style={"background-color": "#066ab1"},
-                        size="sm"),
-
+                        color="secondary",
+                        className="action-btn"),
+                        
                         dbc.Button([
-                            html.I(className="fas fa-search me-2"),  # Font Awesome
-                            "Search"
+                            html.I(className="fas fa-search me-2"),
+                            "Search Molecule"
                         ],
                         id="modal-search-button",
-                        n_clicks=0,
-                        className="mt-2",
-                        style={"background-color": "#066ab1"},
-                        color="warning",
-                        size="sm")
-                    ], width="auto"),
-
-                    dbc.Col(
-                        dbc.Button([
-                            html.I(className="fas fa-times me-2"),  # Font Awesome
-                            "Close"
-                        ],
-                        id="close-draw",
-                        n_clicks=0,
-                        className="mt-2",
-                        style={"background-color": "#066ab1", "color": "white"},
-                        size="sm"),
-                        className="text-end"
-                    )
-                ]),
-
-                # Stores raw SMILES retrieved from Kekule
+                        color="success",
+                        className="action-btn")
+                    ], className="d-flex gap-2 justify-content-center")
+                ], className="mt-4 action-buttons-section"),
+                
+                # Store pour les données
                 dcc.Store(id="raw-smiles"),
-
-                # Results from the "Enter" button (dynamic display)
+                
+                # Résultats du modal
                 html.Div(id="modal-search-results", className="mt-4")
+                
+            ]),
+            dbc.ModalFooter([
+                dbc.Button([
+                    html.I(className="fas fa-times me-2"),
+                    "Close"
+                ],
+                id="close-draw",
+                color="light",
+                className="modal-close-btn")
             ])
         ],
         id="modal-draw",
         is_open=False,
         size="xl",
-        fullscreen=True)
-
-    ],
-    style={
-        "display": display,
-        "margin-left": "-70px",   # Global offset
-        "padding-left": "70px",   # Offset compensation
-        "width": "calc(100% + 20px)"
-    })
+        className="modern-modal",
+        backdrop="static")
+        
+    ], 
+    style={"display": display},
+    className="search-page-container")
